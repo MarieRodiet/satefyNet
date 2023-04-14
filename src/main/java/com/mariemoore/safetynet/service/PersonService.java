@@ -5,7 +5,7 @@ import com.mariemoore.safetynet.repository.PersonRepository;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.util.List;
 import java.util.Optional;
 
 @Data
@@ -15,15 +15,19 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    public Optional<Person> getPerson(Long id){
+    public PersonService(PersonRepository personRepository){
+        this.personRepository = personRepository;
+    }
+
+    public Optional<Person> getPersonById(Long id){
         return personRepository.findById(id);
     }
 
-    public Iterable<Person> getPersons(){
+    public List<Person> getPersons(){
         return personRepository.findAll();
     }
 
-    public void deletePerson(Long id){
+    public void deletePersonById(Long id){
         personRepository.deleteById(id);
     }
 
@@ -31,4 +35,6 @@ public class PersonService {
         Person addedPerson = personRepository.save(person);
         return addedPerson;
     }
+
+
 }
