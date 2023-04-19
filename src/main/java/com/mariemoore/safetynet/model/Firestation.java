@@ -1,32 +1,15 @@
 package com.mariemoore.safetynet.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
 @Data
 public class Firestation {
-
     private String address;
-
     private String station;
-
-    public Firestation(String address, String station) {
-        this.address = address;
-        this.station = station;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getStation() {
-        return station;
-    }
-
-    public void setStation(String station) {
-        this.station = station;
-    }
 }
