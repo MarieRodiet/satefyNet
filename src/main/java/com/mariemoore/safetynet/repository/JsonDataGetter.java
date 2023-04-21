@@ -1,6 +1,7 @@
 package com.mariemoore.safetynet.repository;
 
 import com.jsoniter.JsonIterator;
+import com.mariemoore.safetynet.model.Firestation;
 import com.mariemoore.safetynet.model.Person;
 import org.springframework.stereotype.Component;
 import com.jsoniter.any.Any;
@@ -15,6 +16,7 @@ import java.util.List;
 @Component
 public class JsonDataGetter{
     List<Person> persons = new ArrayList<>();
+    List<Firestation> firestations = new ArrayList<>();
     String filePath = "src/main/resources/data.json";
 
     private static Any buffer;
@@ -41,5 +43,16 @@ public class JsonDataGetter{
                 }
         );
         return this.persons;
+    }
+
+    public List<Firestation> getFirestationsData() throws IOException{
+        Any firestationsData = buffer.get("firestations");
+        firestationsData.forEach(f -> {
+            Firestation temp = new Firestation(
+                    f.get("address").toString(),
+                    f.get("station").toString());
+            this.firestations.add(temp);
+        });
+        return this.firestations;
     }
 }
