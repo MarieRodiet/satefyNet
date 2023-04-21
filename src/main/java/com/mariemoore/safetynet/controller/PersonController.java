@@ -17,8 +17,6 @@ public class PersonController {
     public PersonController(PersonService personService){
         this.personService = personService;
     }
-    @Autowired
-
 
     @GetMapping("/all")
     public List<Person> getPersons(){

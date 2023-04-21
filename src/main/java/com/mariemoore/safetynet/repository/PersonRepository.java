@@ -5,19 +5,16 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public class PersonRepository{
     List<Person> persons;
     JsonDataGetter jsonDataGetter;
 
+
     public PersonRepository(JsonDataGetter jsonDataGetter) throws Exception {
         this.jsonDataGetter = jsonDataGetter;
         this.persons = this.jsonDataGetter.getPersonsData();
-    }
-    void saveAll(List<Person> persons) {
-        this.persons = persons;
     }
 
     public List<Person> findAll() {
@@ -27,16 +24,12 @@ public class PersonRepository{
     public Person deletePerson(Person toDelete) {
        List<Person> toKeep = new ArrayList<>();
        for(Person p : this.persons){
-           if(!p.getFirstName().equals(toDelete.getFirstName().toString()) && !p.getLastName().toString().equals(toDelete.getLastName().toString())){
+           if(!p.getFirstName().equals(toDelete.getFirstName()) && !p.getLastName().equals(toDelete.getLastName())){
                toKeep.add(p);
            }
        }
        this.persons = toKeep;
         return toDelete;
-    }
-
-    public Optional<Person> findById(Long id) {
-        return Optional.ofNullable(this.persons.get(0));
     }
 
     public Person save(Person person) {
@@ -46,7 +39,7 @@ public class PersonRepository{
 
     public Person update(Person toUpdate){
         for(Person p: this.persons){
-            if(p.getFirstName().equals(toUpdate.getFirstName().toString()) && p.getLastName().toString().equals(toUpdate.getLastName().toString())){
+            if(p.getFirstName().equals(toUpdate.getFirstName()) && p.getLastName().equals(toUpdate.getLastName())){
                 p.setAddress(toUpdate.getAddress());
                 p.setCity(toUpdate.getCity());
                 p.setZip(toUpdate.getZip());
