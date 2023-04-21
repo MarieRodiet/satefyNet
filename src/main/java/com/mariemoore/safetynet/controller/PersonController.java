@@ -9,6 +9,7 @@ import java.util.List;
 
 
 @RestController
+@RequestMapping("/person")
 public class PersonController {
 
     @Autowired
@@ -19,21 +20,28 @@ public class PersonController {
     @Autowired
 
 
-    @GetMapping("/persons")
+    @GetMapping("/all")
     public List<Person> getPersons(){
         return personService.getPersons();
     }
 
 
     @ResponseBody
-    @PostMapping("/person")
+    @PostMapping
     public Person addPerson(@RequestBody Person person){
         return personService.addPerson(person);
     }
 
-    //TODO
-    //put request -> mettre à jour une personne existante (pour le moment, supposons que le prénom et le nom de
-    //delete request supprimer une personne (utilisez une combinaison de prénom et de nom comme identificateur
-    //unique)
+    @ResponseBody
+    @DeleteMapping
+    public Person deletePerson(@RequestBody Person person){
+        return personService.deletePerson(person);
+    }
+
+    @ResponseBody
+    @PutMapping
+    public Person updatePerson(@RequestBody Person person){
+        return personService.updatePerson(person);
+    }
 
 }

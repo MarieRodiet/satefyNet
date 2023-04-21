@@ -27,8 +27,8 @@ public class PersonService {
         return personRepository.findAll();
     }
 
-    public void deletePersonById(Long id){
-        personRepository.deleteById(id);
+    public Person deletePerson(Person person){
+        return personRepository.deletePerson(person);
     }
 
     public Person addPerson(Person person){
@@ -37,4 +37,8 @@ public class PersonService {
     }
 
 
+    public Person updatePerson(Person person) {
+        Person updatedPerson = personRepository.update(person);
+        return updatedPerson;
+    }
 }
