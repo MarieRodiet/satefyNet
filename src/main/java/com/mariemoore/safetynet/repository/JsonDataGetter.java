@@ -2,6 +2,7 @@ package com.mariemoore.safetynet.repository;
 
 import com.jsoniter.JsonIterator;
 import com.mariemoore.safetynet.model.Firestation;
+import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.model.Person;
 import org.springframework.stereotype.Component;
 import com.jsoniter.any.Any;
@@ -10,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -17,6 +19,8 @@ import java.util.List;
 public class JsonDataGetter{
     List<Person> persons = new ArrayList<>();
     List<Firestation> firestations = new ArrayList<>();
+
+    List<MedicalRecord> medicalRecords = new ArrayList<>();
     String filePath = "src/main/resources/data.json";
 
     private static Any buffer;
@@ -54,5 +58,21 @@ public class JsonDataGetter{
             this.firestations.add(temp);
         });
         return this.firestations;
+    }
+
+    public List<MedicalRecord> getMedicalRecordsData() throws IOException{
+        Any medicalRecordsData = buffer.get("medicalrecords");
+        medicalRecordsData.forEach(f -> {
+            MedicalRecord temp = new MedicalRecord(
+                    f.get("firstName").toString(),
+                    f.get("lastName").toString(),
+                    f.get("birthdate").toString(),
+                    Collections.singletonList(f.get("medications").toString()),
+                    Collections.singletonList(f.get("allergies").toString())
+            );
+
+            this.medicalRecords.add(temp);
+        });
+        return this.medicalRecords;
     }
 }

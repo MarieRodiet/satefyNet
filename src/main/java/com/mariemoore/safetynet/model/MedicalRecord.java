@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @Data
-public class MedicalRecords {
+public class MedicalRecord {
     private String firstName;
     private String lastName;
     private String birthdate;
