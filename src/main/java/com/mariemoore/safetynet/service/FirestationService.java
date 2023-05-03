@@ -21,15 +21,16 @@ public class FirestationService {
 
     public List<Firestation> getFirestations(){ return firestationRepository.getFirestations();}
 
-    public Firestation addFirestation(Firestation firestation){
-        return this.firestationRepository.saveFirestation(firestation);
+
+    public Firestation addFirestation(Integer stationId, String address){
+        return this.firestationRepository.saveFirestation(stationId, address);
     }
 
     public Firestation updateFirestation(Firestation firestation){
         return this.firestationRepository.updateFirestation(firestation);
     }
 
-    public Firestation deleteFirestation(Firestation firestation){
+    public Firestation deleteFirestation(Firestation firestation) {
         return this.firestationRepository.deleteFirestation(firestation);
     }
 }

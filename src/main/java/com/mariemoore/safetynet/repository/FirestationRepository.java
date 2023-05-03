@@ -2,7 +2,6 @@ package com.mariemoore.safetynet.repository;
 
 import com.mariemoore.safetynet.model.Firestation;
 import org.springframework.stereotype.Repository;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,15 +20,17 @@ public class FirestationRepository {
         return firestations;
     }
 
-    public Firestation saveFirestation(Firestation toAdd){
-        this.firestations.add(toAdd);
-        return toAdd;
+
+    public Firestation saveFirestation(Integer stationId, String stationAddress){
+        Firestation f = new Firestation(stationId,stationAddress);
+        this.firestations.add(f);
+        return f;
     }
 
     public Firestation updateFirestation(Firestation toUpdate){
         for(Firestation f: this.firestations){
             if(f.getAddress().equals(toUpdate.getAddress())){
-                f.setStation(toUpdate.getStation());
+                f.setStationId(toUpdate.getStationId());
             }
         }
         return toUpdate;

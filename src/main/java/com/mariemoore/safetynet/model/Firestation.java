@@ -10,6 +10,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Data
 public class Firestation {
+    private Integer stationId;
     private String address;
-    private String station;
 }

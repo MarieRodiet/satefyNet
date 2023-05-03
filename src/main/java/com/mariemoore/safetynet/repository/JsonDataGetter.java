@@ -6,7 +6,6 @@ import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.model.Person;
 import org.springframework.stereotype.Component;
 import com.jsoniter.any.Any;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -26,9 +25,16 @@ public class JsonDataGetter{
     private static Any buffer;
 
     public JsonDataGetter() throws IOException {
-        byte[] fileContentArray = Files.readAllBytes(new File(filePath).toPath());
-        JsonIterator iterator = JsonIterator.parse(fileContentArray);
-        buffer = iterator.readAny();
+        Any deserialized =  JsonIterator.deserialize(Files.readAllBytes(new File("src/main/resources/data.json").toPath()));
+        buffer = deserialized;
+    }
+
+    public class Persons{
+        public List<Person> persons;
+    }
+
+    public void getPersonDataFromJson() throws IOException {
+        Any something = JsonIterator.deserialize(Files.readAllBytes(new File("src/main/resources/data.json").toPath()));
     }
 
     public List<Person> getPersonsData() throws IOException {
@@ -53,8 +59,8 @@ public class JsonDataGetter{
         Any firestationsData = buffer.get("firestations");
         firestationsData.forEach(f -> {
             Firestation temp = new Firestation(
-                    f.get("address").toString(),
-                    f.get("station").toString());
+                    f.get("station").toInt(),
+                    f.get("address").toString());
             this.firestations.add(temp);
         });
         return this.firestations;

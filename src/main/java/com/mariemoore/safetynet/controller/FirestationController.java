@@ -4,7 +4,6 @@ import com.mariemoore.safetynet.model.Firestation;
 import com.mariemoore.safetynet.service.FirestationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -26,11 +25,17 @@ public class FirestationController {
     }
 
 
+
     @ResponseBody
     @PostMapping
     public Firestation addFirestation(@RequestBody Firestation firestation){
-        return firestationService.addFirestation(firestation);
+        //System.out.println(firestation);
+        //int stationId = 18;
+        //String stationAddress = "6 new station";
+        return firestationService.addFirestation(firestation.getStationId(), firestation.getAddress());
     }
+
+
 
     @ResponseBody
     @DeleteMapping
