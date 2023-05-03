@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -25,19 +24,19 @@ public class JsonDataGetter{
     private static Any buffer;
 
     public JsonDataGetter() throws IOException {
-        Any deserialized =  JsonIterator.deserialize(Files.readAllBytes(new File("src/main/resources/data.json").toPath()));
-        buffer = deserialized;
+        buffer = JsonIterator.deserialize(Files.readAllBytes(new File(filePath).toPath()));
     }
 
-    public class Persons{
-        public List<Person> persons;
+    public List<String> getDeserializedJsonList(Any source) throws IOException {
+        List<String> deserializedList = new ArrayList<>();
+        if(source.size()<0) {
+            return new ArrayList<>();
+        }
+        source.forEach(object -> deserializedList.add(object.toString()));
+        return deserializedList;
     }
 
-    public void getPersonDataFromJson() throws IOException {
-        Any something = JsonIterator.deserialize(Files.readAllBytes(new File("src/main/resources/data.json").toPath()));
-    }
-
-    public List<Person> getPersonsData() throws IOException {
+    public List<Person> getPersonsData(){
         Any personsData = buffer.get("persons");
         personsData.forEach(a -> {
             Person temp = new Person(
@@ -55,7 +54,7 @@ public class JsonDataGetter{
         return this.persons;
     }
 
-    public List<Firestation> getFirestationsData() throws IOException{
+    public List<Firestation> getFirestationsData() {
         Any firestationsData = buffer.get("firestations");
         firestationsData.forEach(f -> {
             Firestation temp = new Firestation(
@@ -66,16 +65,22 @@ public class JsonDataGetter{
         return this.firestations;
     }
 
-    public List<MedicalRecord> getMedicalRecordsData() throws IOException{
+    public List<MedicalRecord> getMedicalRecordsData() {
         Any medicalRecordsData = buffer.get("medicalrecords");
         medicalRecordsData.forEach(f -> {
-            MedicalRecord temp = new MedicalRecord(
-                    f.get("firstName").toString(),
-                    f.get("lastName").toString(),
-                    f.get("birthdate").toString(),
-                    Collections.singletonList(f.get("medications").toString()),
-                    Collections.singletonList(f.get("allergies").toString())
-            );
+            MedicalRecord temp;
+            try {
+                temp = new MedicalRecord(
+                        f.get("firstName").toString(),
+                        f.get("lastName").toString(),
+                        f.get("birthdate").toString(),
+                        this.getDeserializedJsonList(f.get("medications")),
+                        this.getDeserializedJsonList(f.get("allergies"))
+
+                );
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
 
             this.medicalRecords.add(temp);
         });
