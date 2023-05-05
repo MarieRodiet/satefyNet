@@ -2,7 +2,6 @@ package com.mariemoore.safetynet.repository;
 
 import com.mariemoore.safetynet.model.Firestation;
 import org.springframework.stereotype.Repository;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +10,7 @@ public class FirestationRepository {
     List<Firestation> firestations;
     JsonDataGetter jsonDataGetter;
 
-    public FirestationRepository(List<Firestation> firestations, JsonDataGetter jsonDataGetter) throws IOException {
+    public FirestationRepository(List<Firestation> firestations, JsonDataGetter jsonDataGetter){
         this.jsonDataGetter = jsonDataGetter;
         this.firestations = this.jsonDataGetter.getFirestationsData();
     }
@@ -30,7 +29,7 @@ public class FirestationRepository {
     public Firestation updateFirestation(Firestation toUpdate){
         for(Firestation f: this.firestations){
             if(f.getAddress().equals(toUpdate.getAddress())){
-                f.setStationId(toUpdate.getStationId());
+                f.setStation(toUpdate.getStation());
             }
         }
         return toUpdate;

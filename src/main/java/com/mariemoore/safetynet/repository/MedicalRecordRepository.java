@@ -3,7 +3,6 @@ package com.mariemoore.safetynet.repository;
 import com.mariemoore.safetynet.model.MedicalRecord;
 import org.springframework.stereotype.Repository;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ public class MedicalRecordRepository {
 
     JsonDataGetter jsonDataGetter;
 
-    public MedicalRecordRepository(JsonDataGetter jsonDataGetter) throws IOException {
+    public MedicalRecordRepository(JsonDataGetter jsonDataGetter) {
         this.jsonDataGetter = jsonDataGetter;
         this.medicalRecords = this.jsonDataGetter.getMedicalRecordsData();
     }
