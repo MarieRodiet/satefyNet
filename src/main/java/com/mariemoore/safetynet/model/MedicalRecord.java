@@ -1,15 +1,13 @@
 package com.mariemoore.safetynet.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class MedicalRecord {
     private String firstName;

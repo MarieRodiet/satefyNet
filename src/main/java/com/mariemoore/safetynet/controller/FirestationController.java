@@ -29,10 +29,7 @@ public class FirestationController {
     @ResponseBody
     @PostMapping
     public Firestation addFirestation(@RequestBody Firestation firestation){
-        //System.out.println(firestation);
-        //int stationId = 18;
-        //String stationAddress = "6 new station";
-        return firestationService.addFirestation(firestation.getStationId(), firestation.getAddress());
+        return firestationService.addFirestation(firestation.getStation(), firestation.getAddress());
     }
 
 
