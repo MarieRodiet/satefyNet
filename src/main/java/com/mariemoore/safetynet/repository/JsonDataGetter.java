@@ -22,11 +22,7 @@ public class JsonDataGetter{
 
     Content content;
 
-    public JsonDataGetter() throws IOException {
-        this.JsonReader();
-    }
-
-    public void JsonReader(){
+    public JsonDataGetter(){
         ObjectMapper objectMapper = new ObjectMapper();
         File jsonFile = new File(this.filePath);
         try{
