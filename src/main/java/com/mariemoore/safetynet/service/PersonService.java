@@ -23,15 +23,14 @@ public class PersonService {
         return personRepository.findAll();
     }
 
-    public Person deletePerson(Person person){
-        return personRepository.deletePerson(person);
+    public Person deletePerson(String lastname, String firstname){
+        return personRepository.deletePerson(lastname, firstname);
     }
 
     public Person addPerson(Person person){
         Person addedPerson = personRepository.save(person);
         return addedPerson;
     }
-
 
     public Person updatePerson(Person person) {
         Person updatedPerson = personRepository.update(person);

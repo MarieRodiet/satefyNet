@@ -4,6 +4,7 @@ import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.service.MedicalRecordService;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Objects;
@@ -27,40 +28,39 @@ public class MedicalRecordController {
         return medicalRecordService.getMedicalRecords();
     }
 
-
     @ResponseBody
     @PostMapping
-    public MedicalRecord addMedicalRecord(@RequestBody MedicalRecord medicalRecord){
+    public ResponseEntity<MedicalRecord> addMedicalRecord(@RequestBody MedicalRecord medicalRecord){
         MedicalRecord addedMedicalRecord = medicalRecordService.addMedicalRecord(medicalRecord);
         if(Objects.isNull(addedMedicalRecord)){
             logger.error("could not add medical record");
-            return null;
+            return ResponseEntity.noContent().build();
         }
         logger.info("medical record added successfully");
-        return addedMedicalRecord;
-    }
-
-    @ResponseBody
-    @DeleteMapping
-    public MedicalRecord deleteMedicalRecord(@RequestBody MedicalRecord medicalRecord){
-        MedicalRecord deletedMedicalRecord = medicalRecordService.deleteMedicalRecord(medicalRecord);
-        if(Objects.isNull(deletedMedicalRecord)){
-            logger.error("could not delete medical records");
-            return null;
-        }
-        logger.info("medical record added successfully");
-        return  deletedMedicalRecord;
+        return ResponseEntity.ok().body(addedMedicalRecord);
     }
 
     @ResponseBody
     @PutMapping
-    public MedicalRecord updateMedicalRecord(@RequestBody MedicalRecord medicalRecord){
+    public ResponseEntity<MedicalRecord> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord){
         MedicalRecord updatedMedicalRecord = medicalRecordService.updateMedicalRecord(medicalRecord);
         if(Objects.isNull(updatedMedicalRecord)){
             logger.error("could not modify medical record");
-            return null;
+            return ResponseEntity.noContent().build();
         }
         logger.info("medical records updated successfully");
-        return updatedMedicalRecord;
+        return ResponseEntity.ok().body(updatedMedicalRecord);
+    }
+
+    @ResponseBody
+    @DeleteMapping
+    public ResponseEntity<MedicalRecord> deleteMedicalRecord(@RequestBody MedicalRecord medicalRecord){
+        MedicalRecord deletedMedicalRecord = medicalRecordService.deleteMedicalRecord(medicalRecord);
+        if(Objects.isNull(deletedMedicalRecord)){
+            logger.error("could not delete medical records");
+            return ResponseEntity.noContent().build();
+        }
+        logger.info("medical record added successfully");
+        return ResponseEntity.ok().body(deletedMedicalRecord);
     }
 }

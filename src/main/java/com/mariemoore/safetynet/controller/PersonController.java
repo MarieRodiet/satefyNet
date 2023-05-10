@@ -4,6 +4,8 @@ import com.mariemoore.safetynet.model.Person;
 import com.mariemoore.safetynet.service.PersonService;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Objects;
@@ -29,38 +31,37 @@ public class PersonController {
 
     @ResponseBody
     @PostMapping
-    public Person addPerson(@RequestBody Person person){
+    public ResponseEntity<Person> addPerson(@RequestBody Person person){
         Person addedPerson = personService.addPerson(person);
         if(Objects.isNull(addedPerson)){
             logger.error("could not add person");
-            return null;
+            return ResponseEntity.noContent().build();
         }
         logger.info("person added successfully");
-        return addedPerson;
-    }
-
-    @ResponseBody
-    @DeleteMapping
-    public Person deletePerson(@RequestBody Person person){
-        Person deletedPerson = personService.deletePerson(person);
-        if(Objects.isNull(deletedPerson)){
-            logger.error("could not delete person");
-            return null;
-        }
-        logger.info("person deleted successfully");
-        return deletedPerson;
+        return ResponseEntity.ok().body(addedPerson);
     }
 
     @ResponseBody
     @PutMapping
-    public Person updatePerson(@RequestBody Person person){
+    public ResponseEntity<Person> updatePerson(@RequestBody Person person){
         Person updatedPerson = personService.updatePerson(person);
         if(Objects.isNull(updatedPerson)){
             logger.error("could not modify person");
-            return null;
+            return ResponseEntity.noContent().build();
         }
         logger.info("person updated successfully");
-        return updatedPerson;
+        return ResponseEntity.ok().body(updatedPerson);
     }
 
+    @ResponseBody
+    @DeleteMapping
+    public ResponseEntity<Person> deletePerson(@RequestBody Person person){
+        Person deletedPerson = personService.deletePerson(person.getLastName(), person.getFirstName());
+        if(Objects.isNull(deletedPerson)){
+            logger.error("could not delete person");
+            return ResponseEntity.noContent().build();
+        }
+        logger.info("person deleted successfully");
+        return ResponseEntity.ok().body(deletedPerson);
+    }
 }
