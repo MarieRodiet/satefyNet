@@ -2,18 +2,18 @@ package com.mariemoore.safetynet.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
-
 import java.util.List;
 
-
-@Getter
-@Setter
+/**
+ * Content class is used by Object Mapper to read the json file containing
+ * all the data for creating Lists of Objects Persons, Firestations and MedicalRecords.
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Content {
-    List<Person> persons;
-    List<Firestation> firestations;
-    List<MedicalRecord> medicalrecords;
+    private List<Person> persons;
+    private List<Firestation> firestations;
+    private List<MedicalRecord> medicalrecords;
 }

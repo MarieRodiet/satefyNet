@@ -1,11 +1,12 @@
 package com.mariemoore.safetynet.model;
 
 import lombok.*;
-
 import java.util.List;
 
-@Getter
-@Setter
+/**
+ * Medical Record class creates objects containing common properties
+ * with Person objects (firstname, lastname)
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
