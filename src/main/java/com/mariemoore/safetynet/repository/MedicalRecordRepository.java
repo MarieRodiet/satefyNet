@@ -3,8 +3,6 @@ package com.mariemoore.safetynet.repository;
 import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.utils.Validation;
 import org.springframework.stereotype.Repository;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,38 +23,35 @@ public class MedicalRecordRepository {
         return this.medicalRecords;
     }
 
-    public MedicalRecord save(MedicalRecord medicalRecord){
-        MedicalRecord alreadyExists = this.medicalRecords.stream().filter( m ->
-                m.getFirstName().equals(medicalRecord.getFirstName()) && m.getLastName().equals(medicalRecord.getLastName()))
-                .findAny().orElse(null);
-        if(this.validation.isMedicalRecordInvalid(medicalRecord) || Objects.nonNull(alreadyExists)){
+    public MedicalRecord save(MedicalRecord toAdd){
+        MedicalRecord exists = this.validation.medicalRecordExists(this.medicalRecords, toAdd.getFirstName(), toAdd.getLastName());
+        //will only add if medical record is valid and that person's medical record does not already exists
+        if(this.validation.isMedicalRecordInvalid(toAdd) || Objects.nonNull(exists)){
             return null;
         }
-        this.medicalRecords.add(medicalRecord);
-        return medicalRecord;
+        this.medicalRecords.add(toAdd);
+        return toAdd;
     }
 
     public MedicalRecord update(MedicalRecord toUpdate){
-        Boolean isFoundAndValid = false;
-        for(MedicalRecord m: this.medicalRecords){
-            if(m.getFirstName().equals(toUpdate.getFirstName()) && m.getLastName().equals(toUpdate.getLastName()) && !this.validation.isMedicalRecordInvalid(toUpdate)){
-                isFoundAndValid = true;
-                m.setMedications(toUpdate.getMedications());
-                m.setAllergies(toUpdate.getAllergies());
-                m.setBirthdate(toUpdate.getBirthdate());
-            }
+        MedicalRecord exists = this.validation.medicalRecordExists(this.medicalRecords, toUpdate.getFirstName(), toUpdate.getLastName());
+        //will only update if medical record already exists
+        if(Objects.isNull(exists)){
+            return null;
         }
-        return isFoundAndValid ? toUpdate : null;
+        exists.setMedications(toUpdate.getMedications());
+        exists.setAllergies(toUpdate.getAllergies());
+        exists.setBirthdate(toUpdate.getBirthdate());
+        return toUpdate;
     }
 
     public MedicalRecord delete(MedicalRecord toDelete){
-        for(MedicalRecord m: this.medicalRecords){
-            if(m.getFirstName().equals(toDelete.getFirstName()) && m.getLastName().equals(toDelete.getLastName())){
-                m.setMedications(new ArrayList<>());
-                m.setAllergies(new ArrayList<>());
-                return m;
-            }
+        MedicalRecord exists = this.validation.medicalRecordExists(this.medicalRecords, toDelete.getFirstName(), toDelete.getLastName());
+        //will only delete if medical record already exists
+        if(Objects.isNull(exists)){
+            return null;
         }
-        return null;
+        this.medicalRecords.stream().filter((m -> !m.equals(exists)));
+        return toDelete;
     }
 }

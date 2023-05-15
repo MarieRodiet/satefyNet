@@ -5,6 +5,9 @@ import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.model.Person;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Objects;
+
 @Service
 public class Validation {
     public static boolean isStringInvalid(String s) {
@@ -37,6 +40,7 @@ public class Validation {
     }
 
     public static boolean isMedicalRecordInvalid(MedicalRecord toValidate){
+
         if (
                 isStringInvalid(toValidate.getFirstName()) ||
                 isStringInvalid(toValidate.getLastName()) ||
@@ -47,5 +51,13 @@ public class Validation {
             return true;
         }
         else return false;
+    }
+
+    public static MedicalRecord medicalRecordExists(List<MedicalRecord> medicalRecords, String firstname, String lastname){
+        MedicalRecord medicalRecordExists = medicalRecords.stream().filter( m ->
+                        m.getFirstName().equals(firstname) && m.getLastName().equals(lastname))
+                .findAny().orElse(null);
+
+        return medicalRecordExists;
     }
 }
