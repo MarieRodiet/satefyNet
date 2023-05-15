@@ -2,8 +2,11 @@ package com.mariemoore.safetynet.model;
 
 import lombok.*;
 
-@Getter
-@Setter
+/**
+ * Firestation class creates objects containing a common propertie
+ * with Person objects (address)
+ * A Firestation can have multiple addresses
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

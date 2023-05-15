@@ -33,4 +33,8 @@ public class FirestationService {
     public Firestation deleteFirestation(Firestation firestation) {
         return this.firestationRepository.deleteFirestation(firestation);
     }
+
+    public List<String> findAddressesOfFirestation(Integer stationId){
+        return this.firestationRepository.findAddressesByFirestation(stationId);
+    }
 }
