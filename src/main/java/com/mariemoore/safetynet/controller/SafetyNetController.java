@@ -43,34 +43,18 @@ public class SafetyNetController {
     @ResponseBody
     @GetMapping("/firestation")
     public PersonAndFirestationDTO getPersonsAttachedToStation(@RequestParam(value = "stationNumber") Integer stationNumber){
-        //return 1. List<PersonDTO> living in the area of the stationNumber
-        //return 2. Object {"adults": 20, "children": 10} of that list
-        //Person: firstname, lastname, address, phone number
-
-        List<String> stationAddresses;
-        stationAddresses = this.firestationService.findAddressesOfFirestation(stationNumber);
-        List<Person> personListLivingAtFirestationAddresses = null;
+        List<String> stationAddresses = this.firestationService.findAddressesOfFirestation(stationNumber);
+        List<PersonDTO> personsDTO = null;
 
         if (stationAddresses.size() > 0) {
-            List<Person> allPersons = this.personService.getPersons();
-            personListLivingAtFirestationAddresses = allPersons.stream()
+            personsDTO = this.personService.getPersons().stream()
                     .filter(person -> stationAddresses.stream().anyMatch(a -> Objects.equals(person.getAddress(), a)))
-                    .collect(Collectors.toList());
+                    .map(p-> new PersonDTO(p.getFirstName(), p.getLastName(), p.getPhone())).collect(Collectors.toList());
         }
 
-        //get birthdays of Person to calculate their age
-        List<PersonDTO> personDTOS = new ArrayList<>();
-        for(Person p: personListLivingAtFirestationAddresses){
-            MedicalRecord medicalRecord = new MedicalRecord();
-            this.medicalRecordService.getMedicalRecords().stream()
-                    .filter(m -> Objects.equals(m.getFirstName(), p.getFirstName()) && Objects.equals(m.getLastName(), p.getLastName()))
-                    .findAny().orElse(null);
-            personDTOS.add(new PersonDTO(medicalRecord.getFirstName(), medicalRecord.getLastName(), medicalRecord.getBirthdate()));
-        }
+        HashMap<String, Integer> nbOfAdultsAndChildren = Calculations.countAdultsAndChildren(personsDTO , this.medicalRecordService.getMedicalRecords());
 
-        HashMap<String, Integer> nbOfAdultsAndChildren = Calculations.countAdultsAndChildren(personListLivingAtFirestationAddresses, this.medicalRecordService.getMedicalRecords());
-
-        PersonAndFirestationDTO result = new PersonAndFirestationDTO(personListLivingAtFirestationAddresses, nbOfAdultsAndChildren);
+        PersonAndFirestationDTO result = new PersonAndFirestationDTO(personsDTO, nbOfAdultsAndChildren);
         return result;
     }
 

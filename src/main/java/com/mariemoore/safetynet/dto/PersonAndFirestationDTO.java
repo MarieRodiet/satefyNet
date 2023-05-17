@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public record PersonAndFirestationDTO(
-        List<Person> persons,
+        List<PersonDTO> persons,
         HashMap<String, Integer> nbOfAdultsAndChildren
 ) {
 }
