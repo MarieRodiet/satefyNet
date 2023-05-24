@@ -54,4 +54,42 @@ public class MedicalRecordRepository {
         this.medicalRecords.stream().filter((m -> !m.equals(exists)));
         return toDelete;
     }
+
+    public MedicalRecord findMedicalRecordByFirstnameAndLastname(String firstname, String lastname){
+        return this.medicalRecords.stream()
+                .filter(medicalRecord -> Objects.equals(medicalRecord.getFirstName(), firstname) &&
+                        Objects.equals(medicalRecord.getLastName(), lastname))
+                .findAny()
+                .orElse(null);
+    }
+
+    public String getBirthdayFromFirstnameAndLastname(String firstname, String lastname) {
+        return this.medicalRecords.stream()
+                .filter(medicalRecord -> Objects.equals(medicalRecord.getFirstName(), firstname) &&
+                        Objects.equals(medicalRecord.getLastName(), lastname)
+                )
+                .map(medicalRecord -> medicalRecord.getBirthdate())
+                .findAny()
+                .orElse(null);
+    }
+
+    public List<String> getMedicationFromFirstnameAndLastname(String firstname, String lastname) {
+        return this.medicalRecords.stream()
+                .filter(medicalRecord -> Objects.equals(medicalRecord.getFirstName(), firstname) &&
+                        Objects.equals(medicalRecord.getLastName(), lastname)
+                )
+                .map(medicalRecord -> medicalRecord.getMedications())
+                .findAny()
+                .orElse(null);
+    }
+
+    public List<String> getAllergiesFromFirstnameAndLastname(String firstname, String lastname) {
+        return this.medicalRecords.stream()
+                .filter(medicalRecord -> Objects.equals(medicalRecord.getFirstName(), firstname) &&
+                        Objects.equals(medicalRecord.getLastName(), lastname)
+                )
+                .map(medicalRecord -> medicalRecord.getAllergies())
+                .findAny()
+                .orElse(null);
+    }
 }

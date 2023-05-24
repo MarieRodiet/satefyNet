@@ -5,6 +5,7 @@ import com.mariemoore.safetynet.utils.Validation;
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Repository
@@ -65,5 +66,13 @@ public class FirestationRepository {
                 .map(firestation -> firestation.getAddress())
                 .collect(Collectors.toList());
         return addresses;
+    }
+
+    public Integer findStationNumberByAddress(String address){
+        return this.firestations.stream()
+                .filter(firestation -> Objects.equals(firestation.getAddress(), address))
+                .map(firestation -> firestation.getStation())
+                .findAny()
+                .orElse(null);
     }
 }

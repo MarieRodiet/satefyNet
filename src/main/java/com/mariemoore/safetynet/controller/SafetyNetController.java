@@ -1,9 +1,6 @@
 package com.mariemoore.safetynet.controller;
 
-import com.mariemoore.safetynet.dto.ChildWithHouseholdDTO;
-import com.mariemoore.safetynet.dto.PersonAgeDTO;
-import com.mariemoore.safetynet.dto.PersonAndFirestationDTO;
-import com.mariemoore.safetynet.dto.PersonPhoneDTO;
+import com.mariemoore.safetynet.dto.*;
 import com.mariemoore.safetynet.model.Person;
 import com.mariemoore.safetynet.service.FirestationService;
 import com.mariemoore.safetynet.service.MedicalRecordService;
@@ -65,10 +62,7 @@ public class SafetyNetController {
     @GetMapping("/childAlert")
     public ResponseEntity<List<ChildWithHouseholdDTO>> getChildrenWithHouseholdAtAddress(@RequestParam(value = "address") String address){
         //get all people living at this address
-        List<Person> peopleLivingAtAddress = this.personService.getPersons()
-                .stream()
-                .filter(person -> Objects.equals(person.getAddress(), address))
-                .collect(Collectors.toList());
+        List<Person> peopleLivingAtAddress = this.personService.findPersonsByAddress(address);
 
         //get all children out of this list with their age
         List<PersonAgeDTO> children = CustomFilters.getChildrenFromList(peopleLivingAtAddress, this.medicalRecordService.getMedicalRecords());
@@ -102,19 +96,72 @@ public class SafetyNetController {
         return ResponseEntity.ok().body(phoneNumbers);
     }
 
-    /*
-    http://localhost:8080/fire?address=<address>
-    Cette url doit retourner la liste des habitants vivant à l’adresse donnée
-    ainsi que le numéro de la caserne de pompiers la desservant.
-    La liste doit inclure le nom, le numéro de téléphone, l'âge et les antécédents médicaux
-    (médicaments, posologie et allergies) de chaque personne.*/
     @ResponseBody
     @GetMapping("/fire")
-    public ResponseEntity<String> getPeopleLivingAtAddress(@RequestParam(value="address") String address){
-        //DTO (firstname, lastname, phone, age, medications, allergies, stationNumber
-        System.out.println(address);
-
+    public ResponseEntity<HashMap<Integer, List<PersonMedicalDataDTO>>> getPeopleLivingAtAddress(@RequestParam(value="address") String address){
+        List<Person> personList = this.personService.findPersonsByAddress(address);
+        Integer stationNumber = this.firestationService.findStationNumberByAddress(address);
+        //List DTO (firstname, lastname, phone, age, medications, allergies
+        List<PersonMedicalDataDTO> personMedicalDataDTOS = personList.stream()
+                        .map(person -> new PersonMedicalDataDTO(
+                                person.getFirstName(),
+                                person.getLastName(),
+                                person.getPhone(),
+                                Calculations.calculateAgeFromBirthday(
+                                        this.medicalRecordService.getBirthdayFromFirstnameAndLastname(
+                                                person.getFirstName(), person.getLastName()
+                                        )
+                                ),
+                                this.medicalRecordService.getMedicationFromFirstnameAndLastname(
+                                        person.getFirstName(), person.getLastName()
+                                ),
+                                this.medicalRecordService.getAllergiesFromFirstnameAndLastname(
+                                        person.getFirstName(), person.getLastName()
+                                )
+                        ))
+                                .collect(Collectors.toList());
+        HashMap <Integer, List<PersonMedicalDataDTO>> result = new HashMap<>();
+        result.put(stationNumber, personMedicalDataDTOS);
         logger.info("getting people living at address");
-        return ResponseEntity.ok().body(address);
+        return ResponseEntity.ok().body(result);
+    }
+
+    @ResponseBody
+    @GetMapping("/flood/stations")
+    public ResponseEntity<HashMap<String, List<PersonMedicalDataDTO>> > getHouseholdAttachedToFirestation(@RequestParam("stations") List<Integer> stationNumbers){
+        //list of all addresses of station numbers
+        List<String> allAddresses = this.firestationService.getFirestations().stream()
+                        .filter(firestation -> stationNumbers.stream()
+                                .anyMatch(number -> Objects.equals(firestation.getStation(), number))
+                        )
+                        .map(firestation -> firestation.getAddress())
+                        .collect(Collectors.toList());
+        //List of Person DTO (firstname, lastname, phone, age, medications, allergies)
+        HashMap<String, List<PersonMedicalDataDTO>> result = new HashMap<>();
+
+        for(String address: allAddresses){
+            List<PersonMedicalDataDTO> persons = this.personService.findPersonsByAddress(address).stream()
+                    .map(person -> new PersonMedicalDataDTO(
+                            person.getFirstName(),
+                            person.getLastName(),
+                            person.getPhone(),
+                            Calculations.calculateAgeFromBirthday(
+                                    this.medicalRecordService.getBirthdayFromFirstnameAndLastname(
+                                            person.getFirstName(), person.getLastName()
+                                    )
+                            ),
+                            this.medicalRecordService.getMedicationFromFirstnameAndLastname(
+                                    person.getFirstName(), person.getLastName()
+                            ),
+                            this.medicalRecordService.getAllergiesFromFirstnameAndLastname(
+                                    person.getFirstName(), person.getLastName()
+                            )
+
+                    ))
+                    .collect(Collectors.toList());
+            result.put(address, persons);
+        }
+        logger.info("getting household attached to firestation numbers ");
+        return ResponseEntity.ok().body(result);
     }
 }

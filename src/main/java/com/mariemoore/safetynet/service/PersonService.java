@@ -40,4 +40,8 @@ public class PersonService {
     public List<Person> getHouseholdOfChild(String firstName, String lastName) {
         return personRepository.getHouseholdOfChild(firstName, lastName);
     }
+
+    public List<Person> findPersonsByAddress(String address) {
+        return this.personRepository.findPersonsByAddress(address);
+    }
 }

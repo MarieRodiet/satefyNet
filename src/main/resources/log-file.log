@@ -2759,3 +2759,154 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" becau
 2023-05-24T09:43:00.299+02:00 DEBUG 46574 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
 2023-05-24T09:43:00.300+02:00 DEBUG 46574 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["1509 Culver St"]
 2023-05-24T09:43:00.306+02:00 DEBUG 46574 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T10:01:31.566+02:00 DEBUG 56026 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T10:01:31.636+02:00 DEBUG 56026 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2023-05-24T10:01:31.650+02:00 DEBUG 56026 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T10:01:31.656+02:00 DEBUG 56026 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T10:01:40.712+02:00  INFO 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T10:01:40.713+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T10:01:40.713+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T10:01:40.714+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T10:01:40.715+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@239cec23
+2023-05-24T10:01:40.715+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2d2ebc8
+2023-05-24T10:01:40.716+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T10:01:40.717+02:00  INFO 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-24T10:01:40.726+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=1509%20Culer%20St", parameters={masked}
+2023-05-24T10:01:40.732+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-24T10:01:40.760+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-24T10:01:40.761+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-24T10:01:40.774+02:00 DEBUG 56026 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T10:01:45.837+02:00 DEBUG 56026 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=947%20E.%20Rose%20Dr", parameters={masked}
+2023-05-24T10:01:45.838+02:00 DEBUG 56026 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-24T10:01:45.843+02:00 DEBUG 56026 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-24T10:01:45.848+02:00 DEBUG 56026 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ChildWithHouseholdDTO(firstname=Kendrik, lastname=Stelzer, age=9, household=[Person(firstName=Brian (truncated)...]
+2023-05-24T10:01:45.856+02:00 DEBUG 56026 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T10:09:45.620+02:00 DEBUG 60198 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T10:09:45.684+02:00 DEBUG 60198 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2023-05-24T10:09:45.697+02:00 DEBUG 60198 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T10:09:45.702+02:00 DEBUG 60198 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T10:09:57.412+02:00  INFO 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T10:09:57.413+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T10:09:57.413+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T10:09:57.413+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T10:09:57.414+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@37dee753
+2023-05-24T10:09:57.414+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@95ebf34
+2023-05-24T10:09:57.415+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T10:09:57.416+02:00  INFO 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-24T10:09:57.423+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20St", parameters={masked}
+2023-05-24T10:09:57.430+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-24T10:09:57.459+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2023-05-24T10:09:57.460+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["1509 Culver St"]
+2023-05-24T10:09:57.468+02:00 DEBUG 60198 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T10:32:15.163+02:00 DEBUG 71495 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T10:32:15.225+02:00 DEBUG 71495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2023-05-24T10:32:15.239+02:00 DEBUG 71495 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T10:32:15.246+02:00 DEBUG 71495 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T10:32:25.542+02:00  INFO 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T10:32:25.543+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T10:32:25.543+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T10:32:25.543+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T10:32:25.544+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1b8e50a4
+2023-05-24T10:32:25.544+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@586b10fa
+2023-05-24T10:32:25.544+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T10:32:25.546+02:00  INFO 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-24T10:32:25.551+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20St", parameters={masked}
+2023-05-24T10:32:25.559+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-24T10:32:25.599+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-24T10:32:25.600+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{3=[PersonMedicalDataDTO(firstName=John, lastName=Boyd, phone=841-874-6512, age=39, medications=[azn (truncated)...]
+2023-05-24T10:32:25.618+02:00 DEBUG 71495 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T10:59:55.216+02:00 DEBUG 83269 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T10:59:55.291+02:00 DEBUG 83269 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-05-24T10:59:55.306+02:00 DEBUG 83269 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T10:59:55.311+02:00 DEBUG 83269 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T10:59:58.627+02:00  INFO 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T10:59:58.627+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T10:59:58.627+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T10:59:58.628+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T10:59:58.628+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7c775455
+2023-05-24T10:59:58.629+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@dff2c86
+2023-05-24T10:59:58.629+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T10:59:58.630+02:00  INFO 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-24T10:59:58.636+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=%3C1,%202%3E", parameters={masked}
+2023-05-24T10:59:58.643+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-24T10:59:58.668+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2023-05-24T10:59:58.669+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["result"]
+2023-05-24T10:59:58.675+02:00 DEBUG 83269 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T11:00:18.378+02:00 DEBUG 83450 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T11:00:18.448+02:00 DEBUG 83450 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-05-24T11:00:18.462+02:00 DEBUG 83450 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T11:00:18.467+02:00 DEBUG 83450 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T11:00:18.864+02:00  INFO 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T11:00:18.864+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T11:00:18.864+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T11:00:18.865+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T11:00:18.865+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@51b91cb9
+2023-05-24T11:00:18.866+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@706f3b8c
+2023-05-24T11:00:18.866+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T11:00:18.867+02:00  INFO 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-05-24T11:00:18.874+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=%3C1,%202%3E", parameters={masked}
+2023-05-24T11:00:18.880+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-24T11:00:18.895+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.m.HandlerMethod                    : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.mariemoore.safetynet.controller.SafetyNetController.getHouseholdAttachedToFirestation(java.util.List<java.lang.Integer>): Failed to convert value of type 'java.lang.String' to required type 'java.util.List'; For input string: "<1,2>"
+2023-05-24T11:00:18.901+02:00  WARN 83450 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.List'; For input string: "<1,2>"]
+2023-05-24T11:00:18.902+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 400 BAD_REQUEST
+2023-05-24T11:00:18.907+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?stations=%3C1,%202%3E", parameters={masked}
+2023-05-24T11:00:18.908+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-24T11:00:18.923+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-24T11:00:18.927+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 24 11:00:18 CEST 2023, status=400, error=Bad Request, path=/flood/stations}]
+2023-05-24T11:00:18.943+02:00 DEBUG 83450 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 400
+2023-05-24T11:00:44.460+02:00 DEBUG 83450 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=1,%202", parameters={masked}
+2023-05-24T11:00:44.460+02:00 DEBUG 83450 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-24T11:00:44.463+02:00 DEBUG 83450 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2023-05-24T11:00:44.464+02:00 DEBUG 83450 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["result"]
+2023-05-24T11:00:44.465+02:00 DEBUG 83450 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T11:13:30.743+02:00 DEBUG 90134 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T11:13:30.810+02:00 DEBUG 90134 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-05-24T11:13:30.824+02:00 DEBUG 90134 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T11:13:30.828+02:00 DEBUG 90134 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T11:13:39.057+02:00  INFO 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T11:13:39.058+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T11:13:39.058+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T11:13:39.058+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T11:13:39.059+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@986c93b
+2023-05-24T11:13:39.059+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@17c9cf6f
+2023-05-24T11:13:39.059+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T11:13:39.060+02:00  INFO 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2023-05-24T11:13:39.067+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=1,%202", parameters={masked}
+2023-05-24T11:13:39.074+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-24T11:13:39.103+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-24T11:13:39.104+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{}]
+2023-05-24T11:13:39.116+02:00 DEBUG 90134 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T11:22:16.041+02:00 DEBUG 94564 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T11:22:16.116+02:00 DEBUG 94564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-05-24T11:22:16.131+02:00 DEBUG 94564 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T11:22:16.136+02:00 DEBUG 94564 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T11:22:20.901+02:00  INFO 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T11:22:20.902+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T11:22:20.902+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T11:22:20.902+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T11:22:20.903+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@42989b9b
+2023-05-24T11:22:20.903+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6d498b72
+2023-05-24T11:22:20.903+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T11:22:20.904+02:00  INFO 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-05-24T11:22:20.911+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=1,%202", parameters={masked}
+2023-05-24T11:22:20.918+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-24T11:22:20.948+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-24T11:22:20.949+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{}]
+2023-05-24T11:22:20.961+02:00 DEBUG 94564 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T11:29:02.473+02:00 DEBUG 97972 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T11:29:02.543+02:00 DEBUG 97972 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2023-05-24T11:29:02.556+02:00 DEBUG 97972 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T11:29:02.562+02:00 DEBUG 97972 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T11:29:08.082+02:00  INFO 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T11:29:08.082+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T11:29:08.083+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T11:29:08.083+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T11:29:08.084+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@322fc7bb
+2023-05-24T11:29:08.084+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3fe3092
+2023-05-24T11:29:08.084+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T11:29:08.086+02:00  INFO 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-24T11:29:08.093+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=1,%202", parameters={masked}
+2023-05-24T11:29:08.101+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-24T11:29:08.143+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-24T11:29:08.147+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{951 LoneTree Rd=[PersonMedicalDataDTO(firstName=Eric, lastName=Cadigan, phone=841-874-7458, age=77, (truncated)...]
+2023-05-24T11:29:08.165+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
