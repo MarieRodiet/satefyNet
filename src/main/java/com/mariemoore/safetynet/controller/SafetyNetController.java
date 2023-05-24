@@ -3,7 +3,7 @@ package com.mariemoore.safetynet.controller;
 import com.mariemoore.safetynet.dto.ChildWithHouseholdDTO;
 import com.mariemoore.safetynet.dto.PersonAgeDTO;
 import com.mariemoore.safetynet.dto.PersonAndFirestationDTO;
-import com.mariemoore.safetynet.dto.PersonDTO;
+import com.mariemoore.safetynet.dto.PersonPhoneDTO;
 import com.mariemoore.safetynet.model.Person;
 import com.mariemoore.safetynet.service.FirestationService;
 import com.mariemoore.safetynet.service.MedicalRecordService;
@@ -46,12 +46,12 @@ public class SafetyNetController {
     @GetMapping("/firestation")
     public ResponseEntity<PersonAndFirestationDTO> getPersonsAttachedToStation(@RequestParam(value = "stationNumber") Integer stationNumber){
         List<String> stationAddresses = this.firestationService.findAddressesOfFirestation(stationNumber);
-        List<PersonDTO> personsDTO = null;
+        List<PersonPhoneDTO> personsDTO = null;
 
         if (stationAddresses.size() > 0) {
             personsDTO = this.personService.getPersons().stream()
                     .filter(person -> stationAddresses.stream().anyMatch(a -> Objects.equals(person.getAddress(), a)))
-                    .map(p-> new PersonDTO(p.getFirstName(), p.getLastName(), p.getPhone())).collect(Collectors.toList());
+                    .map(p-> new PersonPhoneDTO(p.getFirstName(), p.getLastName(), p.getPhone())).collect(Collectors.toList());
         }
 
         HashMap<String, Integer> nbOfAdultsAndChildren = Calculations.countAdultsAndChildren(personsDTO , this.medicalRecordService.getMedicalRecords());
@@ -63,7 +63,7 @@ public class SafetyNetController {
 
     @ResponseBody
     @GetMapping("/childAlert")
-    public ResponseEntity<List<ChildWithHouseholdDTO>> getChildrenAtAddress(@RequestParam(value = "address") String address){
+    public ResponseEntity<List<ChildWithHouseholdDTO>> getChildrenWithHouseholdAtAddress(@RequestParam(value = "address") String address){
         //get all people living at this address
         List<Person> peopleLivingAtAddress = this.personService.getPersons()
                 .stream()
@@ -87,5 +87,34 @@ public class SafetyNetController {
                         .collect(Collectors.toList());
         logger.info("getting all children and their household attached to address");
         return ResponseEntity.ok().body(childrenWithAge);
+    }
+
+    @ResponseBody
+    @GetMapping("/phoneAlert")
+    public ResponseEntity<List<String>> getPhoneNumbersAttachedToFirestationNumber(@RequestParam(value="firestation") Integer stationNumber){
+        List<String> stationAddresses = this.firestationService.findAddressesOfFirestation(stationNumber);
+
+        List<String> phoneNumbers = this.personService.getPersons().stream()
+                .filter(person -> stationAddresses.stream().anyMatch(address -> Objects.equals(person.getAddress(), address)))
+                .map(person -> person.getPhone())
+                .collect(Collectors.toList());
+        logger.info("getting phone numbers of everybody attached to firestation number");
+        return ResponseEntity.ok().body(phoneNumbers);
+    }
+
+    /*
+    http://localhost:8080/fire?address=<address>
+    Cette url doit retourner la liste des habitants vivant à l’adresse donnée
+    ainsi que le numéro de la caserne de pompiers la desservant.
+    La liste doit inclure le nom, le numéro de téléphone, l'âge et les antécédents médicaux
+    (médicaments, posologie et allergies) de chaque personne.*/
+    @ResponseBody
+    @GetMapping("/fire")
+    public ResponseEntity<String> getPeopleLivingAtAddress(@RequestParam(value="address") String address){
+        //DTO (firstname, lastname, phone, age, medications, allergies, stationNumber
+        System.out.println(address);
+
+        logger.info("getting people living at address");
+        return ResponseEntity.ok().body(address);
     }
 }
