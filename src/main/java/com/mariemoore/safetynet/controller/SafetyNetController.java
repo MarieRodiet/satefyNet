@@ -164,4 +164,46 @@ public class SafetyNetController {
         logger.info("getting household attached to firestation numbers ");
         return ResponseEntity.ok().body(result);
     }
+
+    @ResponseBody
+    @GetMapping("/personInfo")
+    public ResponseEntity<String> getListOfPersons(@RequestParam(value="firstName") String firstName, @RequestParam(value="lastName") String lastName){
+        //List DTO (firstname, lastname, address, age, email, medications, allergies
+        List<PersonDataMedicalDataDTO> persons = this.personService.getPersons().stream()
+                        .filter(person -> Objects.equals(person.getFirstName(), firstName) &&
+                                Objects.equals(person.getLastName(), lastName))
+                        .map(person -> new PersonDataMedicalDataDTO(
+                                        person.getFirstName(),
+                                        person.getLastName(),
+                                        person.getAddress(),
+                                        Calculations.calculateAgeFromBirthday(
+                                                this.medicalRecordService.getBirthdayFromFirstnameAndLastname(
+                                                        person.getFirstName(), person.getLastName()
+                                                )
+                                        ),
+                                        person.getEmail(),
+                                        this.medicalRecordService.getMedicationFromFirstnameAndLastname(
+                                                person.getFirstName(), person.getLastName()
+                                        ),
+                                        this.medicalRecordService.getAllergiesFromFirstnameAndLastname(
+                                                person.getFirstName(), person.getLastName()
+                                        )
+                                ))
+                                        .collect(Collectors.toList());
+        logger.info("getting all persons info by first and last names");
+        return ResponseEntity.ok().body("personInfo");
+    }
+
+     @ResponseBody
+     @GetMapping("/communityEmail")
+     public ResponseEntity<List<String>> getPersonsEmailsByCity(@RequestParam(value="city") String city){
+         System.out.println(city);
+         //List of emails of all people living in the city
+         List<String> emails = this.personService.getPersons().stream()
+                     .filter(person -> Objects.equals(person.getCity(), city))
+                     .map(person -> person.getEmail())
+                 .collect(Collectors.toList());
+         logger.info("getting emails of all persons living at: " + city);
+         return ResponseEntity.ok().body(emails);
+     }
 }
