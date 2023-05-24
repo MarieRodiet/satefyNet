@@ -36,4 +36,8 @@ public class PersonService {
         Person updatedPerson = personRepository.update(person);
         return updatedPerson;
     }
+
+    public List<Person> getHouseholdOfChild(String firstName, String lastName) {
+        return personRepository.getHouseholdOfChild(firstName, lastName);
+    }
 }

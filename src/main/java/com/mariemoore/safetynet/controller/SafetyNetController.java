@@ -1,20 +1,22 @@
 package com.mariemoore.safetynet.controller;
 
+import com.mariemoore.safetynet.dto.ChildWithHouseholdDTO;
+import com.mariemoore.safetynet.dto.PersonAgeDTO;
 import com.mariemoore.safetynet.dto.PersonAndFirestationDTO;
 import com.mariemoore.safetynet.dto.PersonDTO;
-import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.model.Person;
 import com.mariemoore.safetynet.service.FirestationService;
 import com.mariemoore.safetynet.service.MedicalRecordService;
 import com.mariemoore.safetynet.service.PersonService;
 import com.mariemoore.safetynet.utils.Calculations;
+import com.mariemoore.safetynet.utils.CustomFilters;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,7 +44,7 @@ public class SafetyNetController {
 
     @ResponseBody
     @GetMapping("/firestation")
-    public PersonAndFirestationDTO getPersonsAttachedToStation(@RequestParam(value = "stationNumber") Integer stationNumber){
+    public ResponseEntity<PersonAndFirestationDTO> getPersonsAttachedToStation(@RequestParam(value = "stationNumber") Integer stationNumber){
         List<String> stationAddresses = this.firestationService.findAddressesOfFirestation(stationNumber);
         List<PersonDTO> personsDTO = null;
 
@@ -55,7 +57,35 @@ public class SafetyNetController {
         HashMap<String, Integer> nbOfAdultsAndChildren = Calculations.countAdultsAndChildren(personsDTO , this.medicalRecordService.getMedicalRecords());
 
         PersonAndFirestationDTO result = new PersonAndFirestationDTO(personsDTO, nbOfAdultsAndChildren);
-        return result;
+        logger.info("getting all persons attached to firestation number");
+        return ResponseEntity.ok().body(result);
     }
 
+    @ResponseBody
+    @GetMapping("/childAlert")
+    public ResponseEntity<List<ChildWithHouseholdDTO>> getChildrenAtAddress(@RequestParam(value = "address") String address){
+        //get all people living at this address
+        List<Person> peopleLivingAtAddress = this.personService.getPersons()
+                .stream()
+                .filter(person -> Objects.equals(person.getAddress(), address))
+                .collect(Collectors.toList());
+
+        //get all children out of this list with their age
+        List<PersonAgeDTO> children = CustomFilters.getChildrenFromList(peopleLivingAtAddress, this.medicalRecordService.getMedicalRecords());
+
+        //get all children with their household
+        List<ChildWithHouseholdDTO> childrenWithAge = new ArrayList<>();
+        childrenWithAge = children.stream()
+                        .map(child -> new ChildWithHouseholdDTO(
+                                child.getFirstName(),
+                                child.getLastName(),
+                                child.getAge(),
+                                personService.getHouseholdOfChild(
+                                        child.getFirstName(),
+                                        child.getLastName())
+                        ))
+                        .collect(Collectors.toList());
+        logger.info("getting all children and their household attached to address");
+        return ResponseEntity.ok().body(childrenWithAge);
+    }
 }

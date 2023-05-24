@@ -3,11 +3,9 @@ package com.mariemoore.safetynet.repository;
 import com.mariemoore.safetynet.model.Person;
 import com.mariemoore.safetynet.utils.Validation;
 import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 @Repository
 public class PersonRepository{
@@ -65,5 +63,28 @@ public class PersonRepository{
         }
         this.persons = toKeep;
         return deleted;
+    }
+
+    public Person findPersonByFirstnameAndLastname(String firstname, String lastname){
+        return this.persons.stream()
+                .filter(person ->
+                        Objects.equals(person.getFirstName(), firstname) &&
+                        Objects.equals(person.getLastName(), lastname))
+                .findAny()
+                .orElse(null);
+    }
+
+    public List<Person> getHouseholdOfChild(String firstname, String lastname) {
+        Person child = findPersonByFirstnameAndLastname(firstname, lastname);
+        List<Person> household = new ArrayList<>();
+        for(Person p : this.persons){
+            if(Objects.equals(p.getLastName(), child.getLastName()) &&
+                    Objects.equals(p.getAddress(), child.getAddress()) &&
+                    !Objects.equals(p.getFirstName(), child.getFirstName())
+            ){
+                household.add(p);
+            }
+        }
+        return household;
     }
 }
