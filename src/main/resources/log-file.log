@@ -2910,3 +2910,675 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" becau
 2023-05-24T11:29:08.143+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
 2023-05-24T11:29:08.147+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{951 LoneTree Rd=[PersonMedicalDataDTO(firstName=Eric, lastName=Cadigan, phone=841-874-7458, age=77, (truncated)...]
 2023-05-24T11:29:08.165+02:00 DEBUG 97972 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-24T11:39:28.444+02:00 DEBUG 3727 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-24T11:39:28.516+02:00 DEBUG 3727 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-24T11:39:28.530+02:00 DEBUG 3727 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-24T11:39:28.535+02:00 DEBUG 3727 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-24T11:39:31.070+02:00  INFO 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-24T11:39:31.071+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-24T11:39:31.071+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-24T11:39:31.071+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-24T11:39:31.072+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6e598e51
+2023-05-24T11:39:31.072+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5749654e
+2023-05-24T11:39:31.073+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-24T11:39:31.074+02:00  INFO 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-24T11:39:31.079+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culver", parameters={masked}
+2023-05-24T11:39:31.086+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-24T11:39:31.111+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-24T11:39:31.112+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, (truncated)...]
+2023-05-24T11:39:31.125+02:00 DEBUG 3727 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:44:02.811+02:00 DEBUG 13273 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T08:44:02.961+02:00 DEBUG 13273 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T08:44:02.995+02:00 DEBUG 13273 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T08:44:03.007+02:00 DEBUG 13273 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T08:44:21.042+02:00  INFO 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T08:44:21.043+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T08:44:21.043+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T08:44:21.043+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T08:44:21.044+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@62cc6889
+2023-05-31T08:44:21.044+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6dd63889
+2023-05-31T08:44:21.045+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T08:44:21.046+02:00  INFO 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-05-31T08:44:21.053+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/firestation?stationNumber=3", parameters={masked}
+2023-05-31T08:44:21.061+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsAttachedToStation(Integer)
+2023-05-31T08:44:21.104+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:44:21.107+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PersonAndFirestationDTO[persons=[PersonPhoneDTO(firstName=John, lastName=Boyd, phone=841-874-6512),  (truncated)...]
+2023-05-31T08:44:21.121+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:44:26.641+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/firestation?stationNumber=33", parameters={masked}
+2023-05-31T08:44:26.642+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsAttachedToStation(Integer)
+2023-05-31T08:44:26.647+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Failed to complete request: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null
+2023-05-31T08:44:26.648+02:00 ERROR 13273 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null
+	at com.mariemoore.safetynet.utils.Calculations.countAdultsAndChildren(Calculations.java:19) ~[classes/:?]
+	at com.mariemoore.safetynet.controller.SafetyNetController.getPersonsAttachedToStation(SafetyNetController.java:54) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:1589) ~[?:?]
+
+2023-05-31T08:44:26.658+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?stationNumber=33", parameters={masked}
+2023-05-31T08:44:26.659+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T08:44:26.662+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:44:26.663+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 08:44:26 CEST 2023, status=500, error=Internal Server Error, path=/firestation (truncated)...]
+2023-05-31T08:44:26.669+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T08:45:35.933+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : POST "/person", parameters={}
+2023-05-31T08:45:35.934+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-05-31T08:45:35.947+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=MariSDFe, lastName=MsdQSDQSDQDf, address=modDQSDFSDFSDFd, city=qsdfqsdf, zip=qsdfqs (truncated)...]
+2023-05-31T08:45:35.950+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:45:35.951+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=MariSDFe, lastName=MsdQSDQSDQDf, address=modDQSDFSDFSDFd, city=qsdfqsdf, zip=qsdfqs (truncated)...]
+2023-05-31T08:45:35.952+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:45:39.741+02:00 DEBUG 13273 --- [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet                : PUT "/person", parameters={}
+2023-05-31T08:45:39.741+02:00 DEBUG 13273 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-05-31T08:45:39.742+02:00 DEBUG 13273 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Jonanathan, lastName=Marrack, address=29 15th St, city=modified, zip=97451, phone=8 (truncated)...]
+2023-05-31T08:45:39.743+02:00 DEBUG 13273 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:45:39.743+02:00 DEBUG 13273 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=Jonanathan, lastName=Marrack, address=29 15th St, city=modified, zip=97451, phone=8 (truncated)...]
+2023-05-31T08:45:39.744+02:00 DEBUG 13273 --- [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:45:45.095+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] o.s.w.s.DispatcherServlet                : PUT "/person", parameters={}
+2023-05-31T08:45:45.096+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-05-31T08:45:45.096+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Jonanathan, lastName=Marck, address=29 15th St, city=modified, zip=97451, phone=841 (truncated)...]
+2023-05-31T08:45:45.097+02:00 ERROR 13273 --- [http-nio-8080-exec-7] c.m.s.c.PersonController                 : could not modify person
+2023-05-31T08:45:45.097+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:45:45.098+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-05-31T08:45:45.098+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-05-31T08:45:53.121+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] o.s.w.s.DispatcherServlet                : GET "/person/all", parameters={}
+2023-05-31T08:45:53.122+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-05-31T08:45:53.126+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:45:53.127+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-05-31T08:45:53.128+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:45:56.535+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : DELETE "/person", parameters={}
+2023-05-31T08:45:56.535+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-05-31T08:45:56.537+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=MariSDFe, lastName=MsdQSDQSDQDf, address=null, city=null, zip=null, phone=null, ema (truncated)...]
+2023-05-31T08:45:56.538+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:45:56.538+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=MariSDFe, lastName=MsdQSDQSDQDf, address=modDQSDFSDFSDFd, city=qsdfqsdf, zip=qsdfqs (truncated)...]
+2023-05-31T08:45:56.539+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:09.564+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=947%20E.%20Rose%20Dr", parameters={masked}
+2023-05-31T08:46:09.565+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-31T08:46:09.567+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:09.571+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ChildWithHouseholdDTO(firstname=Kendrik, lastname=Stelzer, age=9, household=[Person(firstName=Brian (truncated)...]
+2023-05-31T08:46:09.576+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:13.209+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=947%20E.%20Rose%20D", parameters={masked}
+2023-05-31T08:46:13.210+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-31T08:46:13.211+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:13.212+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T08:46:13.212+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:18.711+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/phoneAlert?firestation=3", parameters={masked}
+2023-05-31T08:46:18.712+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPhoneNumbersAttachedToFirestationNumber(Integer)
+2023-05-31T08:46:18.714+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:18.714+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[841-874-6512, 841-874-6513, 841-874-6512, 841-874-6512, 841-874-6544, 841-874-6512, 841-874-6544, 8 (truncated)...]
+2023-05-31T08:46:18.715+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:21.974+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/phoneAlert?firestation=33", parameters={masked}
+2023-05-31T08:46:21.974+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPhoneNumbersAttachedToFirestationNumber(Integer)
+2023-05-31T08:46:21.976+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:21.976+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T08:46:21.977+02:00 DEBUG 13273 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:25.159+02:00 DEBUG 13273 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20St", parameters={masked}
+2023-05-31T08:46:25.159+02:00 DEBUG 13273 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T08:46:25.164+02:00 DEBUG 13273 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:25.168+02:00 DEBUG 13273 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{3=[PersonMedicalDataDTO(firstName=John, lastName=Boyd, phone=841-874-6512, age=39, medications=[azn (truncated)...]
+2023-05-31T08:46:25.171+02:00 DEBUG 13273 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:28.210+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T08:46:28.211+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T08:46:28.212+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:28.212+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{null=[]}]
+2023-05-31T08:46:28.214+02:00  WARN 13273 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)]
+2023-05-31T08:46:28.214+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : Completed 500 INTERNAL_SERVER_ERROR
+2023-05-31T08:46:28.214+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T08:46:28.215+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T08:46:28.215+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:28.215+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 08:46:28 CEST 2023, status=500, error=Internal Server Error, path=/fire}]
+2023-05-31T08:46:28.216+02:00 DEBUG 13273 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T08:46:35.398+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=1,%202", parameters={masked}
+2023-05-31T08:46:35.399+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-31T08:46:35.402+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:35.403+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{951 LoneTree Rd=[PersonMedicalDataDTO(firstName=Eric, lastName=Cadigan, phone=841-874-7458, age=77, (truncated)...]
+2023-05-31T08:46:35.405+02:00 DEBUG 13273 --- [http-nio-8080-exec-7] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:40.673+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=1,%20", parameters={masked}
+2023-05-31T08:46:40.674+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-31T08:46:40.675+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:40.675+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{908 73rd St=[PersonMedicalDataDTO(firstName=Reginold, lastName=Walker, phone=841-874-8547, age=43,  (truncated)...]
+2023-05-31T08:46:40.676+02:00 DEBUG 13273 --- [http-nio-8080-exec-8] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:51.698+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=8", parameters={masked}
+2023-05-31T08:46:51.698+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-31T08:46:51.699+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:51.700+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{}]
+2023-05-31T08:46:51.700+02:00 DEBUG 13273 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:54.854+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culver", parameters={masked}
+2023-05-31T08:46:54.854+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T08:46:54.857+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:54.857+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, tenz@email.com (truncated)...]
+2023-05-31T08:46:54.858+02:00 DEBUG 13273 --- [http-nio-8080-exec-10] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:46:57.263+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culve", parameters={masked}
+2023-05-31T08:46:57.263+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T08:46:57.264+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:46:57.264+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T08:46:57.265+02:00 DEBUG 13273 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:47:00.406+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/firestation?stationNumber=33", parameters={masked}
+2023-05-31T08:47:00.407+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsAttachedToStation(Integer)
+2023-05-31T08:47:00.408+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Failed to complete request: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null
+2023-05-31T08:47:00.408+02:00 ERROR 13273 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null
+	at com.mariemoore.safetynet.utils.Calculations.countAdultsAndChildren(Calculations.java:19) ~[classes/:?]
+	at com.mariemoore.safetynet.controller.SafetyNetController.getPersonsAttachedToStation(SafetyNetController.java:54) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:1589) ~[?:?]
+
+2023-05-31T08:47:00.409+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?stationNumber=33", parameters={masked}
+2023-05-31T08:47:00.409+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T08:47:00.410+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:47:00.410+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 08:47:00 CEST 2023, status=500, error=Internal Server Error, path=/firestation (truncated)...]
+2023-05-31T08:47:00.411+02:00 DEBUG 13273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T08:49:08.476+02:00 DEBUG 15873 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T08:49:08.563+02:00 DEBUG 15873 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T08:49:08.582+02:00 DEBUG 15873 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T08:49:08.590+02:00 DEBUG 15873 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T08:49:10.872+02:00  INFO 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T08:49:10.873+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T08:49:10.873+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T08:49:10.874+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T08:49:10.875+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3e4359a8
+2023-05-31T08:49:10.875+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@53de3ab7
+2023-05-31T08:49:10.876+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T08:49:10.878+02:00  INFO 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms
+2023-05-31T08:49:10.888+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/firestation?stationNumber=33", parameters={masked}
+2023-05-31T08:49:10.909+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsAttachedToStation(Integer)
+2023-05-31T08:51:59.687+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Failed to complete request: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null
+2023-05-31T08:51:59.689+02:00 ERROR 15873 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "personsDTO" is null
+	at com.mariemoore.safetynet.utils.Calculations.countAdultsAndChildren(Calculations.java:19) ~[classes/:?]
+	at com.mariemoore.safetynet.controller.SafetyNetController.getPersonsAttachedToStation(SafetyNetController.java:54) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:1589) ~[?:?]
+
+2023-05-31T08:51:59.702+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?stationNumber=33", parameters={masked}
+2023-05-31T08:51:59.703+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T08:51:59.719+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:51:59.721+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 08:51:59 CEST 2023, status=500, error=Internal Server Error, path=/firestation (truncated)...]
+2023-05-31T08:51:59.742+02:00 DEBUG 15873 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T08:53:36.411+02:00 DEBUG 18191 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T08:53:36.496+02:00 DEBUG 18191 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T08:53:36.515+02:00 DEBUG 18191 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T08:53:36.521+02:00 DEBUG 18191 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T08:53:39.931+02:00  INFO 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T08:53:39.932+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T08:53:39.932+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T08:53:39.932+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T08:53:39.933+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@33c949db
+2023-05-31T08:53:39.933+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@105a931a
+2023-05-31T08:53:39.934+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T08:53:39.935+02:00  INFO 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-05-31T08:53:39.948+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/firestation?stationNumber=33", parameters={masked}
+2023-05-31T08:53:39.958+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsAttachedToStation(Integer)
+2023-05-31T08:53:57.972+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:53:57.973+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PersonAndFirestationDTO[persons=null, nbOfAdultsAndChildren=null]]
+2023-05-31T08:53:57.989+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:54:47.163+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/firestation?stationNumber=3", parameters={masked}
+2023-05-31T08:54:47.164+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsAttachedToStation(Integer)
+2023-05-31T08:54:47.172+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:54:47.173+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PersonAndFirestationDTO[persons=[PersonPhoneDTO(firstName=John, lastName=Boyd, phone=841-874-6512),  (truncated)...]
+2023-05-31T08:54:47.180+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:54:59.594+02:00 DEBUG 18191 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=947%20E.%20Rose%20D", parameters={masked}
+2023-05-31T08:54:59.596+02:00 DEBUG 18191 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-31T08:54:59.600+02:00 DEBUG 18191 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:54:59.600+02:00 DEBUG 18191 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T08:54:59.602+02:00 DEBUG 18191 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:55:05.253+02:00 DEBUG 18191 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=947%20E.%20Rose%20D", parameters={masked}
+2023-05-31T08:55:05.253+02:00 DEBUG 18191 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-31T08:55:05.254+02:00 DEBUG 18191 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:05.255+02:00 DEBUG 18191 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T08:55:05.256+02:00 DEBUG 18191 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:55:09.245+02:00 DEBUG 18191 --- [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=947%20E.%20Rose%20Dr", parameters={masked}
+2023-05-31T08:55:09.245+02:00 DEBUG 18191 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-31T08:55:09.247+02:00 DEBUG 18191 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:09.252+02:00 DEBUG 18191 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ChildWithHouseholdDTO(firstname=Kendrik, lastname=Stelzer, age=9, household=[Person(firstName=Brian (truncated)...]
+2023-05-31T08:55:09.255+02:00 DEBUG 18191 --- [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:55:13.253+02:00 DEBUG 18191 --- [http-nio-8080-exec-7] o.s.w.s.DispatcherServlet                : GET "/phoneAlert?firestation=33", parameters={masked}
+2023-05-31T08:55:13.254+02:00 DEBUG 18191 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPhoneNumbersAttachedToFirestationNumber(Integer)
+2023-05-31T08:55:13.256+02:00 DEBUG 18191 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:13.256+02:00 DEBUG 18191 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T08:55:13.258+02:00 DEBUG 18191 --- [http-nio-8080-exec-7] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:55:16.065+02:00 DEBUG 18191 --- [http-nio-8080-exec-8] o.s.w.s.DispatcherServlet                : GET "/phoneAlert?firestation=3", parameters={masked}
+2023-05-31T08:55:16.065+02:00 DEBUG 18191 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPhoneNumbersAttachedToFirestationNumber(Integer)
+2023-05-31T08:55:16.066+02:00 DEBUG 18191 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:16.067+02:00 DEBUG 18191 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[841-874-6512, 841-874-6513, 841-874-6512, 841-874-6512, 841-874-6544, 841-874-6512, 841-874-6544, 8 (truncated)...]
+2023-05-31T08:55:16.068+02:00 DEBUG 18191 --- [http-nio-8080-exec-8] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:55:19.925+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T08:55:19.926+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T08:55:19.930+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:19.930+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{null=[]}]
+2023-05-31T08:55:19.935+02:00  WARN 18191 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)]
+2023-05-31T08:55:19.936+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : Completed 500 INTERNAL_SERVER_ERROR
+2023-05-31T08:55:19.939+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T08:55:19.941+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T08:55:19.947+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:19.948+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 08:55:19 CEST 2023, status=500, error=Internal Server Error, path=/fire}]
+2023-05-31T08:55:19.956+02:00 DEBUG 18191 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T08:55:22.700+02:00 DEBUG 18191 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20St", parameters={masked}
+2023-05-31T08:55:22.700+02:00 DEBUG 18191 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T08:55:22.702+02:00 DEBUG 18191 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:22.705+02:00 DEBUG 18191 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{3=[PersonMedicalDataDTO(firstName=John, lastName=Boyd, phone=841-874-6512, age=39, medications=[azn (truncated)...]
+2023-05-31T08:55:22.708+02:00 DEBUG 18191 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:55:45.207+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20St", parameters={masked}
+2023-05-31T08:55:45.208+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T08:55:45.209+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:45.210+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{3=[PersonMedicalDataDTO(firstName=John, lastName=Boyd, phone=841-874-6512, age=39, medications=[azn (truncated)...]
+2023-05-31T08:55:45.212+02:00 DEBUG 18191 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T08:55:49.885+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T08:55:49.886+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T08:55:49.887+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:49.887+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{null=[]}]
+2023-05-31T08:55:49.888+02:00  WARN 18191 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)]
+2023-05-31T08:55:49.889+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 500 INTERNAL_SERVER_ERROR
+2023-05-31T08:55:49.890+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T08:55:49.890+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T08:55:49.891+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:55:49.891+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 08:55:49 CEST 2023, status=500, error=Internal Server Error, path=/fire}]
+2023-05-31T08:55:49.892+02:00 DEBUG 18191 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T08:59:39.757+02:00 DEBUG 21273 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T08:59:39.835+02:00 DEBUG 21273 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T08:59:39.854+02:00 DEBUG 21273 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T08:59:39.861+02:00 DEBUG 21273 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T08:59:55.106+02:00  INFO 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T08:59:55.107+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T08:59:55.107+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T08:59:55.107+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T08:59:55.108+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@19438fb2
+2023-05-31T08:59:55.108+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5fc5c0d2
+2023-05-31T08:59:55.109+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T08:59:55.110+02:00  INFO 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-05-31T08:59:55.116+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T08:59:55.123+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T08:59:55.150+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:59:55.151+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{null=null}]
+2023-05-31T08:59:55.165+02:00  WARN 21273 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)]
+2023-05-31T08:59:55.166+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 500 INTERNAL_SERVER_ERROR
+2023-05-31T08:59:55.169+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T08:59:55.170+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T08:59:55.173+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T08:59:55.177+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 08:59:55 CEST 2023, status=500, error=Internal Server Error, path=/fire}]
+2023-05-31T08:59:55.186+02:00 DEBUG 21273 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T09:00:02.363+02:00 DEBUG 21273 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20St", parameters={masked}
+2023-05-31T09:00:02.364+02:00 DEBUG 21273 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T09:00:02.367+02:00 DEBUG 21273 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:00:02.370+02:00 DEBUG 21273 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{3=[PersonMedicalDataDTO(firstName=John, lastName=Boyd, phone=841-874-6512, age=39, medications=[azn (truncated)...]
+2023-05-31T09:00:02.379+02:00 DEBUG 21273 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:00:14.053+02:00 DEBUG 21535 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T09:00:14.141+02:00 DEBUG 21535 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T09:00:14.162+02:00 DEBUG 21535 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T09:00:14.171+02:00 DEBUG 21535 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T09:00:40.422+02:00  INFO 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T09:00:40.423+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T09:00:40.423+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T09:00:40.423+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T09:00:40.424+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@66b920a
+2023-05-31T09:00:40.424+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@145a518a
+2023-05-31T09:00:40.425+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T09:00:40.426+02:00  INFO 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-05-31T09:00:40.434+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:00:40.443+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T09:01:15.000+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:01:15.001+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{null=null}]
+2023-05-31T09:01:15.014+02:00  WARN 21535 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)]
+2023-05-31T09:01:15.015+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 500 INTERNAL_SERVER_ERROR
+2023-05-31T09:01:15.019+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:01:15.020+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T09:01:15.023+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:01:15.024+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 09:01:15 CEST 2023, status=500, error=Internal Server Error, path=/fire}]
+2023-05-31T09:01:15.034+02:00 DEBUG 21535 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T09:03:29.771+02:00 DEBUG 23169 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T09:03:29.848+02:00 DEBUG 23169 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T09:03:29.865+02:00 DEBUG 23169 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T09:03:29.870+02:00 DEBUG 23169 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T09:03:36.054+02:00  INFO 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T09:03:36.054+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T09:03:36.055+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T09:03:36.055+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T09:03:36.056+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@702e48e5
+2023-05-31T09:03:36.056+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7236a875
+2023-05-31T09:03:36.057+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T09:03:36.058+02:00  INFO 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-31T09:03:36.063+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:03:36.070+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T09:03:36.100+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:03:36.101+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{null=[]}]
+2023-05-31T09:03:36.113+02:00  WARN 23169 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)]
+2023-05-31T09:03:36.114+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 500 INTERNAL_SERVER_ERROR
+2023-05-31T09:03:36.117+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:03:36.118+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T09:03:36.123+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:03:36.127+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 09:03:36 CEST 2023, status=500, error=Internal Server Error, path=/fire}]
+2023-05-31T09:03:36.136+02:00 DEBUG 23169 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T09:04:09.872+02:00 DEBUG 23516 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T09:04:10.007+02:00 DEBUG 23516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T09:04:10.029+02:00 DEBUG 23516 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T09:04:10.038+02:00 DEBUG 23516 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T09:04:10.587+02:00  INFO 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T09:04:10.587+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T09:04:10.588+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T09:04:10.588+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T09:04:10.589+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@158593ab
+2023-05-31T09:04:10.589+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@395d1b69
+2023-05-31T09:04:10.590+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T09:04:10.591+02:00  INFO 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-31T09:04:10.597+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:04:10.604+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T09:04:10.632+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:04:10.633+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{null=[]}]
+2023-05-31T09:04:10.647+02:00  WARN 23516 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)]
+2023-05-31T09:04:10.648+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 500 INTERNAL_SERVER_ERROR
+2023-05-31T09:04:10.651+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:04:10.653+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T09:04:10.656+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:04:10.660+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 09:04:10 CEST 2023, status=500, error=Internal Server Error, path=/fire}]
+2023-05-31T09:04:10.669+02:00 DEBUG 23516 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T09:04:13.228+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:04:13.229+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T09:04:13.230+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:04:13.230+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{null=[]}]
+2023-05-31T09:04:13.231+02:00  WARN 23516 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Null key for a Map not allowed in JSON (use a converting NullKeySerializer?)]
+2023-05-31T09:04:13.231+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 500 INTERNAL_SERVER_ERROR
+2023-05-31T09:04:13.232+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : "ERROR" dispatch for GET "/error?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:04:13.232+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-05-31T09:04:13.233+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:04:13.234+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 31 09:04:13 CEST 2023, status=500, error=Internal Server Error, path=/fire}]
+2023-05-31T09:04:13.235+02:00 DEBUG 23516 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Exiting from "ERROR" dispatch, status 500
+2023-05-31T09:04:44.852+02:00 DEBUG 23852 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T09:04:44.927+02:00 DEBUG 23852 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T09:04:44.942+02:00 DEBUG 23852 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T09:04:44.949+02:00 DEBUG 23852 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T09:04:52.068+02:00  INFO 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T09:04:52.070+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T09:04:52.071+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T09:04:52.072+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T09:04:52.073+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3c3df88b
+2023-05-31T09:04:52.073+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@556cef80
+2023-05-31T09:04:52.074+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T09:04:52.076+02:00  INFO 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms
+2023-05-31T09:04:52.083+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:04:52.092+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T09:04:52.119+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:04:52.120+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-05-31T09:04:52.122+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-05-31T09:05:08.222+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/firestation?stationNumber=3", parameters={masked}
+2023-05-31T09:05:08.222+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsAttachedToStation(Integer)
+2023-05-31T09:05:08.242+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:08.245+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PersonAndFirestationDTO[persons=[PersonPhoneDTO(firstName=John, lastName=Boyd, phone=841-874-6512),  (truncated)...]
+2023-05-31T09:05:08.257+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:11.236+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/firestation?stationNumber=33", parameters={masked}
+2023-05-31T09:05:11.236+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsAttachedToStation(Integer)
+2023-05-31T09:05:11.237+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:11.238+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PersonAndFirestationDTO[persons=null, nbOfAdultsAndChildren=null]]
+2023-05-31T09:05:11.239+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:13.841+02:00 DEBUG 23852 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=947%20E.%20Rose%20Dr", parameters={masked}
+2023-05-31T09:05:13.842+02:00 DEBUG 23852 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-31T09:05:13.844+02:00 DEBUG 23852 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:13.853+02:00 DEBUG 23852 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[ChildWithHouseholdDTO(firstname=Kendrik, lastname=Stelzer, age=9, household=[Person(firstName=Brian (truncated)...]
+2023-05-31T09:05:13.860+02:00 DEBUG 23852 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:16.039+02:00 DEBUG 23852 --- [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet                : GET "/childAlert?address=947%20E.%20Rose%20D", parameters={masked}
+2023-05-31T09:05:16.040+02:00 DEBUG 23852 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getChildrenWithHouseholdAtAddress(String)
+2023-05-31T09:05:16.041+02:00 DEBUG 23852 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:16.042+02:00 DEBUG 23852 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T09:05:16.043+02:00 DEBUG 23852 --- [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:18.708+02:00 DEBUG 23852 --- [http-nio-8080-exec-7] o.s.w.s.DispatcherServlet                : GET "/phoneAlert?firestation=3", parameters={masked}
+2023-05-31T09:05:18.708+02:00 DEBUG 23852 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPhoneNumbersAttachedToFirestationNumber(Integer)
+2023-05-31T09:05:18.710+02:00 DEBUG 23852 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:18.711+02:00 DEBUG 23852 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[841-874-6512, 841-874-6513, 841-874-6512, 841-874-6512, 841-874-6544, 841-874-6512, 841-874-6544, 8 (truncated)...]
+2023-05-31T09:05:18.712+02:00 DEBUG 23852 --- [http-nio-8080-exec-7] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:21.285+02:00 DEBUG 23852 --- [http-nio-8080-exec-8] o.s.w.s.DispatcherServlet                : GET "/phoneAlert?firestation=33", parameters={masked}
+2023-05-31T09:05:21.286+02:00 DEBUG 23852 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPhoneNumbersAttachedToFirestationNumber(Integer)
+2023-05-31T09:05:21.287+02:00 DEBUG 23852 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:21.288+02:00 DEBUG 23852 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T09:05:21.288+02:00 DEBUG 23852 --- [http-nio-8080-exec-8] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:23.809+02:00 DEBUG 23852 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20S", parameters={masked}
+2023-05-31T09:05:23.810+02:00 DEBUG 23852 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T09:05:23.810+02:00 DEBUG 23852 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:23.811+02:00 DEBUG 23852 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-05-31T09:05:23.811+02:00 DEBUG 23852 --- [http-nio-8080-exec-9] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-05-31T09:05:27.067+02:00 DEBUG 23852 --- [http-nio-8080-exec-10] o.s.w.s.DispatcherServlet                : GET "/fire?address=1509%20Culver%20St", parameters={masked}
+2023-05-31T09:05:27.067+02:00 DEBUG 23852 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPeopleLivingAtAddress(String)
+2023-05-31T09:05:27.071+02:00 DEBUG 23852 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:27.075+02:00 DEBUG 23852 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{3=[PersonMedicalDataDTO(firstName=John, lastName=Boyd, phone=841-874-6512, age=39, medications=[azn (truncated)...]
+2023-05-31T09:05:27.078+02:00 DEBUG 23852 --- [http-nio-8080-exec-10] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:30.778+02:00 DEBUG 23852 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=8", parameters={masked}
+2023-05-31T09:05:30.779+02:00 DEBUG 23852 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-31T09:05:30.782+02:00 DEBUG 23852 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:30.782+02:00 DEBUG 23852 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{}]
+2023-05-31T09:05:30.783+02:00 DEBUG 23852 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:34.599+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/flood/stations?stations=1", parameters={masked}
+2023-05-31T09:05:34.600+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getHouseholdAttachedToFirestation(List)
+2023-05-31T09:05:34.601+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:34.602+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{908 73rd St=[PersonMedicalDataDTO(firstName=Reginold, lastName=Walker, phone=841-874-8547, age=43,  (truncated)...]
+2023-05-31T09:05:34.603+02:00 DEBUG 23852 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:38.118+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culve", parameters={masked}
+2023-05-31T09:05:38.119+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:05:38.121+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:38.121+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-05-31T09:05:38.122+02:00 DEBUG 23852 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:05:40.353+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culver", parameters={masked}
+2023-05-31T09:05:40.353+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:05:40.354+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:05:40.354+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, (truncated)...]
+2023-05-31T09:05:40.355+02:00 DEBUG 23852 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:15:41.208+02:00 DEBUG 29392 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T09:15:41.295+02:00 DEBUG 29392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T09:15:41.312+02:00 DEBUG 29392 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T09:15:41.319+02:00 DEBUG 29392 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T09:16:19.538+02:00  INFO 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T09:16:19.539+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T09:16:19.539+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T09:16:19.540+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T09:16:19.542+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@232414d8
+2023-05-31T09:16:19.542+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@10346cf
+2023-05-31T09:16:19.542+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T09:16:19.544+02:00  INFO 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms
+2023-05-31T09:16:19.550+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culver", parameters={masked}
+2023-05-31T09:16:19.558+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:16:19.588+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:16:19.590+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, (truncated)...]
+2023-05-31T09:16:19.604+02:00 DEBUG 29392 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:16:32.188+02:00 DEBUG 29392 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culve", parameters={masked}
+2023-05-31T09:16:32.188+02:00 DEBUG 29392 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:16:32.189+02:00 ERROR 29392 --- [http-nio-8080-exec-3] c.m.s.c.MedicalRecordController          : could not get a list of persons living in this city: Culve
+2023-05-31T09:16:32.190+02:00 DEBUG 29392 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:16:32.190+02:00 DEBUG 29392 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-05-31T09:16:32.191+02:00 DEBUG 29392 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-05-31T09:17:08.766+02:00 DEBUG 29392 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culver", parameters={masked}
+2023-05-31T09:17:08.767+02:00 DEBUG 29392 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:17:08.768+02:00 DEBUG 29392 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:17:08.769+02:00 DEBUG 29392 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, (truncated)...]
+2023-05-31T09:17:08.771+02:00 DEBUG 29392 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:20:46.674+02:00 DEBUG 32042 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T09:20:46.743+02:00 DEBUG 32042 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T09:20:46.755+02:00 DEBUG 32042 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T09:20:46.762+02:00 DEBUG 32042 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T09:20:57.920+02:00  INFO 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T09:20:57.920+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T09:20:57.920+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T09:20:57.921+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T09:20:57.921+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@17d7fd73
+2023-05-31T09:20:57.922+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@298b1e0a
+2023-05-31T09:20:57.922+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T09:20:57.923+02:00  INFO 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-05-31T09:20:57.930+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culver", parameters={masked}
+2023-05-31T09:20:57.938+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:20:57.966+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:20:57.968+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, (truncated)...]
+2023-05-31T09:20:57.984+02:00 DEBUG 32042 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:21:22.871+02:00 DEBUG 32042 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culve", parameters={masked}
+2023-05-31T09:21:22.871+02:00 DEBUG 32042 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:21:22.872+02:00 ERROR 32042 --- [http-nio-8080-exec-3] c.m.s.c.MedicalRecordController          : could not get a list of persons living in this city: Culve
+2023-05-31T09:21:22.874+02:00 DEBUG 32042 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:21:22.874+02:00 DEBUG 32042 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-05-31T09:21:22.874+02:00 DEBUG 32042 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-05-31T09:21:27.096+02:00 DEBUG 32042 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culve", parameters={masked}
+2023-05-31T09:21:27.097+02:00 DEBUG 32042 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:21:27.098+02:00 ERROR 32042 --- [http-nio-8080-exec-4] c.m.s.c.MedicalRecordController          : could not get a list of persons living in this city: Culve
+2023-05-31T09:21:27.099+02:00 DEBUG 32042 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:21:27.100+02:00 DEBUG 32042 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-05-31T09:21:27.100+02:00 DEBUG 32042 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-05-31T09:22:17.992+02:00 DEBUG 32825 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T09:22:18.058+02:00 DEBUG 32825 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T09:22:18.080+02:00 DEBUG 32825 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T09:22:18.086+02:00 DEBUG 32825 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T09:22:22.948+02:00  INFO 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T09:22:22.949+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T09:22:22.949+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T09:22:22.949+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T09:22:22.951+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@65db1a7e
+2023-05-31T09:22:22.951+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5b33f972
+2023-05-31T09:22:22.952+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T09:22:22.956+02:00  INFO 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 5 ms
+2023-05-31T09:22:22.965+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culve", parameters={masked}
+2023-05-31T09:22:22.983+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:22:23.026+02:00 ERROR 32825 --- [http-nio-8080-exec-2] c.m.s.c.MedicalRecordController          : could not get a list of persons living in this city: Culve
+2023-05-31T09:22:23.051+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:22:23.052+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-05-31T09:22:23.058+02:00 DEBUG 32825 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-05-31T09:22:38.276+02:00 DEBUG 32825 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culver", parameters={masked}
+2023-05-31T09:22:38.276+02:00 DEBUG 32825 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:22:38.281+02:00 DEBUG 32825 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:22:38.283+02:00 DEBUG 32825 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, (truncated)...]
+2023-05-31T09:22:38.302+02:00 DEBUG 32825 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:22:58.351+02:00 DEBUG 32825 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : GET "/communityEmail?city=Culver", parameters={masked}
+2023-05-31T09:22:58.352+02:00 DEBUG 32825 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.SafetyNetController#getPersonsEmailsByCity(String)
+2023-05-31T09:22:58.353+02:00 DEBUG 32825 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T09:22:58.353+02:00 DEBUG 32825 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, (truncated)...]
+2023-05-31T09:22:58.354+02:00 DEBUG 32825 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK

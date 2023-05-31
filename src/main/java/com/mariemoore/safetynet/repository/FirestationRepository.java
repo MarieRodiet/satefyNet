@@ -60,8 +60,7 @@ public class FirestationRepository {
     }
 
     public List<String> findAddressesByFirestation(Integer stationId){
-        List<String> addresses = new ArrayList<>();
-        addresses = this.firestations.stream()
+        List<String> addresses = this.firestations.stream()
                 .filter(firestation -> firestation.getStation().equals(stationId))
                 .map(firestation -> firestation.getAddress())
                 .collect(Collectors.toList());

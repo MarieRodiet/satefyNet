@@ -44,14 +44,18 @@ public class SafetyNetController {
     public ResponseEntity<PersonAndFirestationDTO> getPersonsAttachedToStation(@RequestParam(value = "stationNumber") Integer stationNumber){
         List<String> stationAddresses = this.firestationService.findAddressesOfFirestation(stationNumber);
         List<PersonPhoneDTO> personsDTO = null;
+        HashMap<String, Integer> nbOfAdultsAndChildren = null;
 
         if (stationAddresses.size() > 0) {
             personsDTO = this.personService.getPersons().stream()
                     .filter(person -> stationAddresses.stream().anyMatch(a -> Objects.equals(person.getAddress(), a)))
                     .map(p-> new PersonPhoneDTO(p.getFirstName(), p.getLastName(), p.getPhone())).collect(Collectors.toList());
+            nbOfAdultsAndChildren = Calculations.countAdultsAndChildren(personsDTO , this.medicalRecordService.getMedicalRecords());
         }
-
-        HashMap<String, Integer> nbOfAdultsAndChildren = Calculations.countAdultsAndChildren(personsDTO , this.medicalRecordService.getMedicalRecords());
+        else {
+            logger.error("could not get persons who are attached to station " + stationNumber);
+            return ResponseEntity.noContent().build();
+        }
 
         PersonAndFirestationDTO result = new PersonAndFirestationDTO(personsDTO, nbOfAdultsAndChildren);
         logger.info("getting all persons attached to firestation number");
@@ -63,6 +67,10 @@ public class SafetyNetController {
     public ResponseEntity<List<ChildWithHouseholdDTO>> getChildrenWithHouseholdAtAddress(@RequestParam(value = "address") String address){
         //get all people living at this address
         List<Person> peopleLivingAtAddress = this.personService.findPersonsByAddress(address);
+        if(peopleLivingAtAddress.size() == 0 ){
+            logger.error("could not find anyone living at this address: " + address);
+            return ResponseEntity.noContent().build();
+        }
 
         //get all children out of this list with their age
         List<PersonAgeDTO> children = CustomFilters.getChildrenFromList(peopleLivingAtAddress, this.medicalRecordService.getMedicalRecords());
@@ -88,6 +96,10 @@ public class SafetyNetController {
     public ResponseEntity<List<String>> getPhoneNumbersAttachedToFirestationNumber(@RequestParam(value="firestation") Integer stationNumber){
         List<String> stationAddresses = this.firestationService.findAddressesOfFirestation(stationNumber);
 
+        if(stationAddresses.size() == 0){
+            logger.error("could not find anyone attached to this firestation number: " + stationNumber);
+            return ResponseEntity.noContent().build();
+        }
         List<String> phoneNumbers = this.personService.getPersons().stream()
                 .filter(person -> stationAddresses.stream().anyMatch(address -> Objects.equals(person.getAddress(), address)))
                 .map(person -> person.getPhone())
@@ -100,27 +112,33 @@ public class SafetyNetController {
     @GetMapping("/fire")
     public ResponseEntity<HashMap<Integer, List<PersonMedicalDataDTO>>> getPeopleLivingAtAddress(@RequestParam(value="address") String address){
         List<Person> personList = this.personService.findPersonsByAddress(address);
-        Integer stationNumber = this.firestationService.findStationNumberByAddress(address);
+        Integer stationNumber;
+        List<PersonMedicalDataDTO> personMedicalDataDTOS;
+        HashMap <Integer, List<PersonMedicalDataDTO>> result = new HashMap<>();
+        if(personList.size() == 0){
+            logger.error("could not find anyone living at this address: " + address);
+            return ResponseEntity.noContent().build();
+        }
+        stationNumber = this.firestationService.findStationNumberByAddress(address);
         //List DTO (firstname, lastname, phone, age, medications, allergies
-        List<PersonMedicalDataDTO> personMedicalDataDTOS = personList.stream()
-                        .map(person -> new PersonMedicalDataDTO(
-                                person.getFirstName(),
-                                person.getLastName(),
-                                person.getPhone(),
-                                Calculations.calculateAgeFromBirthday(
-                                        this.medicalRecordService.getBirthdayFromFirstnameAndLastname(
-                                                person.getFirstName(), person.getLastName()
-                                        )
-                                ),
-                                this.medicalRecordService.getMedicationFromFirstnameAndLastname(
-                                        person.getFirstName(), person.getLastName()
-                                ),
-                                this.medicalRecordService.getAllergiesFromFirstnameAndLastname(
+        personMedicalDataDTOS = personList.stream()
+                .map(person -> new PersonMedicalDataDTO(
+                        person.getFirstName(),
+                        person.getLastName(),
+                        person.getPhone(),
+                        Calculations.calculateAgeFromBirthday(
+                                this.medicalRecordService.getBirthdayFromFirstnameAndLastname(
                                         person.getFirstName(), person.getLastName()
                                 )
-                        ))
-                                .collect(Collectors.toList());
-        HashMap <Integer, List<PersonMedicalDataDTO>> result = new HashMap<>();
+                        ),
+                        this.medicalRecordService.getMedicationFromFirstnameAndLastname(
+                                person.getFirstName(), person.getLastName()
+                        ),
+                        this.medicalRecordService.getAllergiesFromFirstnameAndLastname(
+                                person.getFirstName(), person.getLastName()
+                        )
+                ))
+                .collect(Collectors.toList());
         result.put(stationNumber, personMedicalDataDTOS);
         logger.info("getting people living at address");
         return ResponseEntity.ok().body(result);
@@ -136,7 +154,12 @@ public class SafetyNetController {
                         )
                         .map(firestation -> firestation.getAddress())
                         .collect(Collectors.toList());
-        //List of Person DTO (firstname, lastname, phone, age, medications, allergies)
+
+        if(allAddresses.size() == 0 ){
+            logger.error("could not find anyone household attached to this list of firestation numbers: " + stationNumbers);
+            return ResponseEntity.noContent().build();
+        }
+        //List of PersonMedicalDataDTO (firstname, lastname, phone, age, medications, allergies)
         HashMap<String, List<PersonMedicalDataDTO>> result = new HashMap<>();
 
         for(String address: allAddresses){
@@ -167,7 +190,7 @@ public class SafetyNetController {
 
     @ResponseBody
     @GetMapping("/personInfo")
-    public ResponseEntity<String> getListOfPersons(@RequestParam(value="firstName") String firstName, @RequestParam(value="lastName") String lastName){
+    public ResponseEntity<List<PersonDataMedicalDataDTO>> getListOfPersons(@RequestParam(value="firstName") String firstName, @RequestParam(value="lastName") String lastName){
         //List DTO (firstname, lastname, address, age, email, medications, allergies
         List<PersonDataMedicalDataDTO> persons = this.personService.getPersons().stream()
                         .filter(person -> Objects.equals(person.getFirstName(), firstName) &&
@@ -190,19 +213,25 @@ public class SafetyNetController {
                                         )
                                 ))
                                         .collect(Collectors.toList());
+        if(persons.size() == 0){
+            logger.error("could not get a list of persons with this firstname and lastname");
+            return ResponseEntity.noContent().build();
+        }
         logger.info("getting all persons info by first and last names");
-        return ResponseEntity.ok().body("personInfo");
+        return ResponseEntity.ok().body(persons);
     }
 
      @ResponseBody
      @GetMapping("/communityEmail")
      public ResponseEntity<List<String>> getPersonsEmailsByCity(@RequestParam(value="city") String city){
-         System.out.println(city);
-         //List of emails of all people living in the city
          List<String> emails = this.personService.getPersons().stream()
                      .filter(person -> Objects.equals(person.getCity(), city))
                      .map(person -> person.getEmail())
                  .collect(Collectors.toList());
+         if(emails.size() == 0){
+             logger.error("could not get a list of persons living in this city: " + city);
+             return ResponseEntity.noContent().build();
+         }
          logger.info("getting emails of all persons living at: " + city);
          return ResponseEntity.ok().body(emails);
      }
