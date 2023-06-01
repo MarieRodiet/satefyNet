@@ -34,4 +34,16 @@ public class MedicalRecordService {
     public  MedicalRecord deleteMedicalRecord(MedicalRecord medicalRecord){
         return this.medicalRecordRepository.delete(medicalRecord);
     }
+
+    public String getBirthdayFromFirstnameAndLastname(String firstName, String lastName) {
+        return this.medicalRecordRepository.getBirthdayFromFirstnameAndLastname(firstName, lastName);
+    }
+
+    public List<String> getMedicationFromFirstnameAndLastname(String firstName, String lastName) {
+        return this.medicalRecordRepository.getMedicationFromFirstnameAndLastname(firstName, lastName);
+    }
+
+    public List<String> getAllergiesFromFirstnameAndLastname(String firstName, String lastName) {
+        return this.medicalRecordRepository.getAllergiesFromFirstnameAndLastname(firstName, lastName);
+    }
 }

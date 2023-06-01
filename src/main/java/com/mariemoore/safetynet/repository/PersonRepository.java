@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Repository
 public class PersonRepository{
@@ -86,5 +87,11 @@ public class PersonRepository{
             }
         }
         return household;
+    }
+
+    public List<Person> findPersonsByAddress(String address){
+        return this.persons.stream()
+                .filter(person -> Objects.equals(person.getAddress(), address))
+                .collect(Collectors.toList());
     }
 }

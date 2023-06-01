@@ -37,4 +37,8 @@ public class FirestationService {
     public List<String> findAddressesOfFirestation(Integer stationId){
         return this.firestationRepository.findAddressesByFirestation(stationId);
     }
+
+    public Integer findStationNumberByAddress(String address) {
+        return this.firestationRepository.findStationNumberByAddress(address);
+    }
 }

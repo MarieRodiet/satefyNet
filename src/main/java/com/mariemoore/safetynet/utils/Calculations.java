@@ -1,6 +1,6 @@
 package com.mariemoore.safetynet.utils;
 
-import com.mariemoore.safetynet.dto.PersonDTO;
+import com.mariemoore.safetynet.dto.PersonPhoneDTO;
 import com.mariemoore.safetynet.model.MedicalRecord;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -8,16 +8,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import static java.lang.Integer.parseInt;
-
 public class Calculations {
 
-    public static HashMap<String, Integer> countAdultsAndChildren(List<PersonDTO> personsDTO, List<MedicalRecord> medicalRecords){
+    public static HashMap<String, Integer> countAdultsAndChildren(List<PersonPhoneDTO> personsDTO, List<MedicalRecord> medicalRecords){
         HashMap<String, Integer> adultChildrenCounts = new HashMap<>();
         Integer adultCount = 0;
         Integer childCount = 0;
         adultChildrenCounts.put("adultCount", adultCount);
         adultChildrenCounts.put("childCount", childCount);
-        for(PersonDTO p: personsDTO){
+        for(PersonPhoneDTO p: personsDTO){
             //Get birthdate from medical record of that person
             String birthdate = medicalRecords.stream()
                     .filter(m -> Objects.equals(m.getFirstName(), p.getFirstName()) && Objects.equals(m.getLastName(), p.getLastName()))
