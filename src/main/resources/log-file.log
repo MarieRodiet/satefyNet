@@ -3582,3 +3582,808 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" becaus
 2023-05-31T09:22:58.353+02:00 DEBUG 32825 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
 2023-05-31T09:22:58.353+02:00 DEBUG 32825 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[jaboyd@email.com, drk@email.com, tenz@email.com, jaboyd@email.com, jaboyd@email.com, drk@email.com, (truncated)...]
 2023-05-31T09:22:58.354+02:00 DEBUG 32825 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T09:59:06.834+02:00 DEBUG 48454 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@388b401d
+2023-05-31T09:59:08.267+02:00 DEBUG 48454 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T09:59:08.363+02:00 DEBUG 48454 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2023-05-31T09:59:08.384+02:00 DEBUG 48454 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T09:59:08.395+02:00 DEBUG 48454 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T09:59:09.208+02:00 DEBUG 48454 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T09:59:09.217+02:00 DEBUG 48454 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T09:59:09.274+02:00 DEBUG 48454 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@388b401d, started on Wed May 31 09:59:06 CEST 2023
+2023-05-31T10:29:31.530+02:00 DEBUG 63821 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e236278
+2023-05-31T10:29:31.987+02:00  WARN 63821 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personController' defined in file [/Users/marierodiet/Desktop/Computer Programming/OC-Java/P5/project/satefyNet/target/classes/com/mariemoore/safetynet/controller/PersonController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.mariemoore.safetynet.service.PersonService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-05-31T10:29:32.016+02:00 ERROR 63821 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.mariemoore.safetynet.controller.PersonController required a bean of type 'com.mariemoore.safetynet.service.PersonService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.mariemoore.safetynet.service.PersonService' in your configuration.
+
+2023-05-31T10:29:32.021+02:00 ERROR 63821 --- [main] o.s.t.c.TestContextManager               : Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.mariemoore.safetynet.PersonControllerTest@370ef50b]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@a90e2c1 testClass = com.mariemoore.safetynet.PersonControllerTest, locations = [], classes = [com.mariemoore.safetynet.SafetynetApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@89caf47 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4218500f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@c35172e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@3401a114, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@7508d65, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@cf23767b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2eced48b, org.springframework.boot.test.context.SpringBootTestAnnotation@f4b694b1], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142) ~[spring-test-6.0.7.jar:6.0.7]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127) ~[spring-test-6.0.7.jar:6.0.7]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141) ~[spring-test-6.0.7.jar:6.0.7]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97) ~[spring-test-6.0.7.jar:6.0.7]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241) ~[spring-test-6.0.7.jar:6.0.7]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-6.0.7.jar:6.0.7]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[?:?]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[?:?]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[?:?]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[?:?]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[?:?]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at java.util.Optional.orElseGet(Optional.java:364) ~[?:?]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.2.jar:5.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.9.2.jar:1.9.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:?]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personController' defined in file [/Users/marierodiet/Desktop/Computer Programming/OC-Java/P5/project/satefyNet/target/classes/com/mariemoore/safetynet/controller/PersonController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.mariemoore.safetynet.service.PersonService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.0.5.jar:3.0.5]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.0.7.jar:6.0.7]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.0.7.jar:6.0.7]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545) ~[spring-boot-test-3.0.5.jar:3.0.5]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.0.5.jar:3.0.5]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.0.5.jar:3.0.5]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184) ~[spring-test-6.0.7.jar:6.0.7]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118) ~[spring-test-6.0.7.jar:6.0.7]
+	... 72 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mariemoore.safetynet.service.PersonService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.0.5.jar:3.0.5]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.0.7.jar:6.0.7]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.0.7.jar:6.0.7]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545) ~[spring-boot-test-3.0.5.jar:3.0.5]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.0.5.jar:3.0.5]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.0.5.jar:3.0.5]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184) ~[spring-test-6.0.7.jar:6.0.7]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118) ~[spring-test-6.0.7.jar:6.0.7]
+	... 72 more
+
+2023-05-31T10:36:00.357+02:00 DEBUG 67133 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@543e593
+2023-05-31T10:36:01.203+02:00 DEBUG 67133 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:36:01.277+02:00 DEBUG 67133 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:36:01.291+02:00 DEBUG 67133 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:36:01.298+02:00 DEBUG 67133 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:36:01.408+02:00  WARN 67133 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-05-31T10:36:01.442+02:00 DEBUG 67133 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@543e593, started on Wed May 31 10:36:00 CEST 2023
+2023-05-31T10:38:19.315+02:00 DEBUG 68262 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@543e593
+2023-05-31T10:38:20.850+02:00 DEBUG 68262 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:38:20.927+02:00 DEBUG 68262 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:38:20.940+02:00 DEBUG 68262 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:38:20.945+02:00 DEBUG 68262 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:38:21.073+02:00 DEBUG 68262 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:38:21.081+02:00 DEBUG 68262 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:38:21.122+02:00 DEBUG 68262 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@543e593, started on Wed May 31 10:38:19 CEST 2023
+2023-05-31T10:41:00.625+02:00 DEBUG 69632 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@543e593
+2023-05-31T10:41:01.456+02:00 DEBUG 69632 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:41:01.521+02:00 DEBUG 69632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:41:01.532+02:00 DEBUG 69632 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:41:01.538+02:00 DEBUG 69632 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:41:01.631+02:00 DEBUG 69632 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:41:01.638+02:00 DEBUG 69632 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:41:01.671+02:00 DEBUG 69632 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@543e593, started on Wed May 31 10:41:00 CEST 2023
+2023-05-31T10:48:40.289+02:00 DEBUG 73573 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f186450
+2023-05-31T10:48:41.194+02:00 DEBUG 73573 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:48:41.261+02:00 DEBUG 73573 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:48:41.273+02:00 DEBUG 73573 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:48:41.278+02:00 DEBUG 73573 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:48:41.372+02:00 DEBUG 73573 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:48:41.378+02:00 DEBUG 73573 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:48:41.406+02:00 DEBUG 73573 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4f186450, started on Wed May 31 10:48:40 CEST 2023
+2023-05-31T10:52:11.759+02:00 DEBUG 75379 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52b6319f
+2023-05-31T10:52:13.092+02:00 DEBUG 75379 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:52:13.161+02:00 DEBUG 75379 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:52:13.175+02:00 DEBUG 75379 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:52:13.181+02:00 DEBUG 75379 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:52:18.914+02:00 DEBUG 75379 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:52:18.921+02:00 DEBUG 75379 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:52:18.957+02:00 DEBUG 75379 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@52b6319f, started on Wed May 31 10:52:11 CEST 2023
+2023-05-31T10:52:21.228+02:00 DEBUG 75463 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f186450
+2023-05-31T10:52:22.118+02:00 DEBUG 75463 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:52:22.198+02:00 DEBUG 75463 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:52:22.210+02:00 DEBUG 75463 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:52:22.216+02:00 DEBUG 75463 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:52:22.318+02:00 DEBUG 75463 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:52:22.323+02:00 DEBUG 75463 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:52:22.358+02:00 DEBUG 75463 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4f186450, started on Wed May 31 10:52:21 CEST 2023
+2023-05-31T10:52:31.214+02:00 DEBUG 75556 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52b6319f
+2023-05-31T10:52:32.267+02:00 DEBUG 75556 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:52:32.344+02:00 DEBUG 75556 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:52:32.358+02:00 DEBUG 75556 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:52:32.364+02:00 DEBUG 75556 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:53:05.219+02:00 DEBUG 75556 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:53:05.283+02:00 DEBUG 75556 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:53:19.542+02:00 DEBUG 75556 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@52b6319f, started on Wed May 31 10:52:31 CEST 2023
+2023-05-31T10:54:00.255+02:00 DEBUG 76252 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@543e593
+2023-05-31T10:54:01.077+02:00 DEBUG 76252 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:54:01.140+02:00 DEBUG 76252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:54:01.152+02:00 DEBUG 76252 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:54:01.158+02:00 DEBUG 76252 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:54:01.250+02:00 DEBUG 76252 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:54:01.255+02:00 DEBUG 76252 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:54:01.290+02:00 DEBUG 76252 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@543e593, started on Wed May 31 10:54:00 CEST 2023
+2023-05-31T10:57:11.544+02:00 DEBUG 77889 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e9804b9
+2023-05-31T10:57:12.495+02:00 DEBUG 77889 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:57:12.568+02:00 DEBUG 77889 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:57:12.581+02:00 DEBUG 77889 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:57:12.587+02:00 DEBUG 77889 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:57:12.681+02:00 DEBUG 77889 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:57:12.687+02:00 DEBUG 77889 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:57:12.723+02:00 DEBUG 77889 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1e9804b9, started on Wed May 31 10:57:11 CEST 2023
+2023-05-31T10:57:30.394+02:00 DEBUG 78059 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e9804b9
+2023-05-31T10:57:31.321+02:00 DEBUG 78059 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:57:31.393+02:00 DEBUG 78059 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:57:31.405+02:00 DEBUG 78059 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:57:31.410+02:00 DEBUG 78059 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:57:31.505+02:00 DEBUG 78059 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:57:31.510+02:00 DEBUG 78059 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:57:31.545+02:00 DEBUG 78059 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1e9804b9, started on Wed May 31 10:57:30 CEST 2023
+2023-05-31T10:57:37.593+02:00 DEBUG 78144 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e9804b9
+2023-05-31T10:57:38.548+02:00 DEBUG 78144 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:57:38.627+02:00 DEBUG 78144 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:57:38.643+02:00 DEBUG 78144 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:57:38.651+02:00 DEBUG 78144 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:57:38.761+02:00 DEBUG 78144 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:57:38.768+02:00 DEBUG 78144 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:57:38.807+02:00 DEBUG 78144 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1e9804b9, started on Wed May 31 10:57:37 CEST 2023
+2023-05-31T10:58:07.892+02:00 DEBUG 78406 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e9804b9
+2023-05-31T10:58:08.754+02:00 DEBUG 78406 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:58:08.825+02:00 DEBUG 78406 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:58:08.838+02:00 DEBUG 78406 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:58:08.844+02:00 DEBUG 78406 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:58:08.942+02:00 DEBUG 78406 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:58:08.947+02:00 DEBUG 78406 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:58:08.984+02:00 DEBUG 78406 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1e9804b9, started on Wed May 31 10:58:07 CEST 2023
+2023-05-31T10:58:56.464+02:00 DEBUG 78843 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1bfe3203
+2023-05-31T10:58:57.323+02:00 DEBUG 78843 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:58:57.393+02:00 DEBUG 78843 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:58:57.407+02:00 DEBUG 78843 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:58:57.412+02:00 DEBUG 78843 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:58:57.502+02:00 DEBUG 78843 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-05-31T10:58:57.507+02:00 DEBUG 78843 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-05-31T10:58:57.542+02:00 DEBUG 78843 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1bfe3203, started on Wed May 31 10:58:56 CEST 2023
+2023-05-31T10:59:10.789+02:00 DEBUG 78936 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'serverHttpObservationFilter' configured for use
+2023-05-31T10:59:10.963+02:00 DEBUG 78936 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:59:11.026+02:00 DEBUG 78936 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:59:11.039+02:00 DEBUG 78936 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:59:11.045+02:00 DEBUG 78936 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:59:14.170+02:00  INFO 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-05-31T10:59:14.170+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-05-31T10:59:14.171+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-05-31T10:59:14.171+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-05-31T10:59:14.172+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@308b3ded
+2023-05-31T10:59:14.172+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@62a6d9ff
+2023-05-31T10:59:14.172+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-05-31T10:59:14.173+02:00  INFO 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-05-31T10:59:14.190+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/person/all", parameters={}
+2023-05-31T10:59:14.196+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-05-31T10:59:14.213+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T10:59:14.215+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-05-31T10:59:14.231+02:00 DEBUG 78936 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-05-31T10:59:31.696+02:00 DEBUG 79106 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@49601f82
+2023-05-31T10:59:32.607+02:00 DEBUG 79106 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T10:59:32.676+02:00 DEBUG 79106 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T10:59:32.688+02:00 DEBUG 79106 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T10:59:32.694+02:00 DEBUG 79106 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T10:59:32.788+02:00 DEBUG 79106 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-05-31T10:59:32.810+02:00 DEBUG 79106 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2023-05-31T10:59:32.814+02:00 DEBUG 79106 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-05-31T10:59:32.909+02:00 DEBUG 79106 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@49601f82, started on Wed May 31 10:59:31 CEST 2023
+2023-05-31T11:00:47.991+02:00 DEBUG 79790 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f186450
+2023-05-31T11:00:48.876+02:00 DEBUG 79790 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:00:48.951+02:00 DEBUG 79790 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:00:48.964+02:00 DEBUG 79790 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:00:48.970+02:00 DEBUG 79790 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:00:49.075+02:00 DEBUG 79790 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-05-31T11:00:49.099+02:00 DEBUG 79790 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2023-05-31T11:00:49.102+02:00 DEBUG 79790 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-05-31T11:00:49.187+02:00 DEBUG 79790 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4f186450, started on Wed May 31 11:00:47 CEST 2023
+2023-05-31T11:01:26.434+02:00 DEBUG 80066 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@543e593
+2023-05-31T11:01:27.347+02:00 DEBUG 80066 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:01:27.500+02:00 DEBUG 80066 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:01:27.522+02:00 DEBUG 80066 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:01:27.528+02:00 DEBUG 80066 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:01:27.648+02:00 DEBUG 80066 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-05-31T11:01:27.670+02:00 DEBUG 80066 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2023-05-31T11:01:27.673+02:00 DEBUG 80066 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-05-31T11:01:27.763+02:00 DEBUG 80066 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@543e593, started on Wed May 31 11:01:26 CEST 2023
+2023-05-31T11:16:11.140+02:00 DEBUG 87603 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e63d216
+2023-05-31T11:16:12.150+02:00 DEBUG 87603 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:16:12.217+02:00 DEBUG 87603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:16:12.232+02:00 DEBUG 87603 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:16:12.238+02:00 DEBUG 87603 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:16:12.929+02:00 DEBUG 87603 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3ff8a3ad
+2023-05-31T11:16:13.173+02:00 DEBUG 87603 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:16:13.182+02:00 DEBUG 87603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:16:13.187+02:00 DEBUG 87603 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:16:13.190+02:00 DEBUG 87603 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:16:13.269+02:00 DEBUG 87603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-05-31T11:16:13.287+02:00 DEBUG 87603 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2023-05-31T11:16:13.291+02:00 DEBUG 87603 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-05-31T11:16:13.369+02:00 DEBUG 87603 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1e63d216, started on Wed May 31 11:16:11 CEST 2023
+2023-05-31T11:16:13.374+02:00 DEBUG 87603 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3ff8a3ad, started on Wed May 31 11:16:12 CEST 2023
+2023-05-31T11:20:25.973+02:00 DEBUG 89762 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4d74c3ba
+2023-05-31T11:20:26.994+02:00 DEBUG 89762 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:20:27.074+02:00 DEBUG 89762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:20:27.091+02:00 DEBUG 89762 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:20:27.099+02:00 DEBUG 89762 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:20:27.224+02:00 DEBUG 89762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-05-31T11:20:27.247+02:00  WARN 89762 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.mariemoore.safetynet.model.Person> com.mariemoore.safetynet.controller.PersonController.addPerson(com.mariemoore.safetynet.model.Person)]
+2023-05-31T11:20:27.293+02:00 DEBUG 89762 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4d74c3ba, started on Wed May 31 11:20:25 CEST 2023
+2023-05-31T11:22:27.116+02:00 DEBUG 90802 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@51ec2df1
+2023-05-31T11:22:28.262+02:00 DEBUG 90802 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:22:28.354+02:00 DEBUG 90802 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:22:28.371+02:00 DEBUG 90802 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:22:28.379+02:00 DEBUG 90802 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:22:28.516+02:00 DEBUG 90802 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-05-31T11:22:28.541+02:00 DEBUG 90802 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2023-05-31T11:22:28.546+02:00 DEBUG 90802 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-05-31T11:22:28.636+02:00 DEBUG 90802 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-05-31T11:22:28.642+02:00  WARN 90802 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.mariemoore.safetynet.model.Person> com.mariemoore.safetynet.controller.PersonController.addPerson(com.mariemoore.safetynet.model.Person)]
+2023-05-31T11:22:28.671+02:00 DEBUG 90802 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@51ec2df1, started on Wed May 31 11:22:27 CEST 2023
+2023-05-31T11:28:30.286+02:00 DEBUG 93901 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7d755813
+2023-05-31T11:28:31.376+02:00 DEBUG 93901 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:28:31.450+02:00 DEBUG 93901 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:28:31.465+02:00 DEBUG 93901 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:28:31.472+02:00 DEBUG 93901 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:28:31.586+02:00 DEBUG 93901 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-05-31T11:28:31.607+02:00 DEBUG 93901 --- [main] o.s.w.m.HandlerMethod                    : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.mariemoore.safetynet.model.Person> com.mariemoore.safetynet.controller.PersonController.addPerson(com.mariemoore.safetynet.model.Person): Content-Type 'application/octet-stream' is not supported
+2023-05-31T11:28:31.610+02:00  WARN 93901 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/octet-stream' is not supported]
+2023-05-31T11:28:31.643+02:00 DEBUG 93901 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7d755813, started on Wed May 31 11:28:30 CEST 2023
+2023-05-31T11:30:37.283+02:00 DEBUG 94931 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-05-31T11:30:38.227+02:00 DEBUG 94931 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:30:38.302+02:00 DEBUG 94931 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:30:38.319+02:00 DEBUG 94931 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:30:38.324+02:00 DEBUG 94931 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:30:38.442+02:00  WARN 94931 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-05-31T11:30:38.480+02:00 DEBUG 94931 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Wed May 31 11:30:37 CEST 2023
+2023-05-31T11:32:32.573+02:00 DEBUG 95964 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c
+2023-05-31T11:32:33.645+02:00 DEBUG 95964 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:32:33.720+02:00 DEBUG 95964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:32:33.736+02:00 DEBUG 95964 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:32:33.742+02:00 DEBUG 95964 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:32:33.871+02:00 DEBUG 95964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-05-31T11:32:33.899+02:00 DEBUG 95964 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T11:32:33.903+02:00 DEBUG 95964 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-05-31T11:32:34.017+02:00 DEBUG 95964 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c, started on Wed May 31 11:32:32 CEST 2023
+2023-05-31T11:34:55.911+02:00 DEBUG 97171 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-05-31T11:34:56.895+02:00 DEBUG 97171 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:34:56.989+02:00 DEBUG 97171 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:34:57.006+02:00 DEBUG 97171 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:34:57.013+02:00 DEBUG 97171 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:34:57.155+02:00 DEBUG 97171 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Wed May 31 11:34:55 CEST 2023
+2023-05-31T11:35:21.072+02:00 DEBUG 97344 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-05-31T11:35:22.001+02:00 DEBUG 97344 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:35:22.078+02:00 DEBUG 97344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:35:22.094+02:00 DEBUG 97344 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:35:22.100+02:00 DEBUG 97344 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:35:22.218+02:00 DEBUG 97344 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Wed May 31 11:35:21 CEST 2023
+2023-05-31T11:35:41.155+02:00 DEBUG 97523 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-05-31T11:35:42.118+02:00 DEBUG 97523 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:35:42.201+02:00 DEBUG 97523 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:35:42.217+02:00 DEBUG 97523 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:35:42.224+02:00 DEBUG 97523 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:35:42.362+02:00 DEBUG 97523 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Wed May 31 11:35:41 CEST 2023
+2023-05-31T11:36:24.656+02:00 DEBUG 97955 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-05-31T11:36:25.582+02:00 DEBUG 97955 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:36:25.654+02:00 DEBUG 97955 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:36:25.667+02:00 DEBUG 97955 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:36:25.673+02:00 DEBUG 97955 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:36:25.783+02:00 DEBUG 97955 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Wed May 31 11:36:24 CEST 2023
+2023-05-31T11:37:42.032+02:00 DEBUG 98576 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-05-31T11:37:42.999+02:00 DEBUG 98576 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-05-31T11:37:43.081+02:00 DEBUG 98576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-05-31T11:37:43.095+02:00 DEBUG 98576 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-05-31T11:37:43.102+02:00 DEBUG 98576 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-05-31T11:37:43.212+02:00 DEBUG 98576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-05-31T11:37:43.280+02:00 DEBUG 98576 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Nicolas, lastName=Gros, address=Chemin des Richards, city=Saint Pierre de Soucy, zi (truncated)...]
+2023-05-31T11:37:43.287+02:00 ERROR 98576 --- [main] c.m.s.c.PersonController                 : could not add person
+2023-05-31T11:37:43.300+02:00 DEBUG 98576 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-05-31T11:37:43.300+02:00 DEBUG 98576 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-05-31T11:37:43.337+02:00 DEBUG 98576 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Wed May 31 11:37:42 CEST 2023
+2023-06-01T09:01:44.807+02:00 DEBUG 2645 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4d74c3ba
+2023-06-01T09:01:45.779+02:00 DEBUG 2645 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:01:45.866+02:00 DEBUG 2645 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:01:45.884+02:00 DEBUG 2645 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:01:45.894+02:00 DEBUG 2645 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:01:46.038+02:00 DEBUG 2645 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-06-01T09:01:46.064+02:00 DEBUG 2645 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:01:46.068+02:00 DEBUG 2645 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-06-01T09:01:46.175+02:00 DEBUG 2645 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:01:46.210+02:00 DEBUG 2645 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Nicolas, lastName=Gros, address=Chemin des Richards, city=Saint Pierre de Soucy, zi (truncated)...]
+2023-06-01T09:01:46.216+02:00 ERROR 2645 --- [main] c.m.s.c.PersonController                 : could not add person
+2023-06-01T09:01:46.219+02:00 DEBUG 2645 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:01:46.220+02:00 DEBUG 2645 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:01:46.257+02:00 DEBUG 2645 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4d74c3ba, started on Thu Jun 01 09:01:44 CEST 2023
+2023-06-01T09:03:30.445+02:00 DEBUG 3660 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-06-01T09:03:31.433+02:00 DEBUG 3660 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:03:31.509+02:00 DEBUG 3660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:03:31.523+02:00 DEBUG 3660 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:03:31.529+02:00 DEBUG 3660 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:03:31.636+02:00 DEBUG 3660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:03:31.697+02:00 DEBUG 3660 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Nicolas, lastName=Gros, address=Chemin des Richards, city=Saint Pierre de Soucy, zi (truncated)...]
+2023-06-01T09:03:31.705+02:00 ERROR 3660 --- [main] c.m.s.c.PersonController                 : could not add person
+2023-06-01T09:03:31.722+02:00 DEBUG 3660 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:03:31.723+02:00 DEBUG 3660 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:03:31.771+02:00 DEBUG 3660 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Thu Jun 01 09:03:30 CEST 2023
+2023-06-01T09:07:47.789+02:00 DEBUG 5981 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@49dbaaf3
+2023-06-01T09:07:48.840+02:00 DEBUG 5981 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:07:48.925+02:00 DEBUG 5981 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:07:48.939+02:00 DEBUG 5981 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:07:48.946+02:00 DEBUG 5981 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:07:49.103+02:00 DEBUG 5981 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:07:49.154+02:00 DEBUG 5981 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=toAdd, lastName=toAdd, address=1509 Culver St, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:07:49.174+02:00 DEBUG 5981 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:07:49.175+02:00 DEBUG 5981 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=toAdd, lastName=toAdd, address=1509 Culver St, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:07:49.217+02:00 DEBUG 5981 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@49dbaaf3, started on Thu Jun 01 09:07:47 CEST 2023
+2023-06-01T09:11:26.122+02:00 DEBUG 7929 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f186450
+2023-06-01T09:11:27.077+02:00 DEBUG 7929 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:11:27.149+02:00 DEBUG 7929 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:11:27.163+02:00 DEBUG 7929 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:11:27.169+02:00 DEBUG 7929 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:11:27.328+02:00 DEBUG 7929 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:11:27.375+02:00 DEBUG 7929 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:11:27.392+02:00 DEBUG 7929 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:11:27.393+02:00 DEBUG 7929 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:11:27.430+02:00 DEBUG 7929 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4f186450, started on Thu Jun 01 09:11:26 CEST 2023
+2023-06-01T09:18:30.934+02:00 DEBUG 11485 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c
+2023-06-01T09:18:32.092+02:00 DEBUG 11485 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:18:32.185+02:00 DEBUG 11485 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:18:32.200+02:00 DEBUG 11485 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:18:32.206+02:00 DEBUG 11485 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:18:32.361+02:00 DEBUG 11485 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:18:32.406+02:00 DEBUG 11485 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:18:32.422+02:00 DEBUG 11485 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:18:32.423+02:00 DEBUG 11485 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:18:32.456+02:00 DEBUG 11485 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c, started on Thu Jun 01 09:18:30 CEST 2023
+2023-06-01T09:18:37.984+02:00 DEBUG 11576 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c
+2023-06-01T09:18:39.104+02:00 DEBUG 11576 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:18:39.244+02:00 DEBUG 11576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:18:39.303+02:00 DEBUG 11576 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:18:39.338+02:00 DEBUG 11576 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:18:39.616+02:00 DEBUG 11576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:18:39.695+02:00 DEBUG 11576 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:18:39.720+02:00 DEBUG 11576 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:18:39.722+02:00 DEBUG 11576 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:18:39.784+02:00 DEBUG 11576 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c, started on Thu Jun 01 09:18:37 CEST 2023
+2023-06-01T09:18:47.877+02:00 DEBUG 11660 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'serverHttpObservationFilter' configured for use
+2023-06-01T09:18:48.065+02:00 DEBUG 11660 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:18:48.155+02:00 DEBUG 11660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:18:48.172+02:00 DEBUG 11660 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:18:48.180+02:00 DEBUG 11660 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:18:54.417+02:00  INFO 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-01T09:18:54.417+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-06-01T09:18:54.418+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-06-01T09:18:54.418+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-06-01T09:18:54.419+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@36dd00c
+2023-06-01T09:18:54.419+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@353444eb
+2023-06-01T09:18:54.420+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-06-01T09:18:54.421+02:00  INFO 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-06-01T09:18:54.443+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/person/all", parameters={}
+2023-06-01T09:18:54.449+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-06-01T09:18:54.465+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:18:54.468+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-06-01T09:18:54.487+02:00 DEBUG 11660 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-06-01T09:19:07.760+02:00 DEBUG 11660 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : POST "/person", parameters={}
+2023-06-01T09:19:07.762+02:00 DEBUG 11660 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:19:07.773+02:00 DEBUG 11660 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:19:07.780+02:00 ERROR 11660 --- [http-nio-8080-exec-3] c.m.s.c.PersonController                 : could not add person
+2023-06-01T09:19:07.784+02:00 DEBUG 11660 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:19:07.784+02:00 DEBUG 11660 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:19:07.784+02:00 DEBUG 11660 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-06-01T09:19:18.055+02:00 DEBUG 11660 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : POST "/person", parameters={}
+2023-06-01T09:19:18.056+02:00 DEBUG 11660 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:19:18.057+02:00 DEBUG 11660 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Bod, address=1509 Culver St, city=Culver, zip=97451, phone=841-874-6 (truncated)...]
+2023-06-01T09:19:18.058+02:00 DEBUG 11660 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:19:18.058+02:00 DEBUG 11660 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Bod, address=1509 Culver St, city=Culver, zip=97451, phone=841-874-6 (truncated)...]
+2023-06-01T09:19:18.059+02:00 DEBUG 11660 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-06-01T09:19:54.939+02:00 DEBUG 11660 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : GET "/person/all", parameters={}
+2023-06-01T09:19:54.940+02:00 DEBUG 11660 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-06-01T09:19:54.941+02:00 DEBUG 11660 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:19:54.941+02:00 DEBUG 11660 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-06-01T09:19:54.943+02:00 DEBUG 11660 --- [http-nio-8080-exec-5] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-06-01T09:20:00.335+02:00 DEBUG 11660 --- [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet                : POST "/person", parameters={}
+2023-06-01T09:20:00.335+02:00 DEBUG 11660 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:20:00.336+02:00 DEBUG 11660 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Bod, address=1509 Culver St, city=Culver, zip=97451, phone=841-874-6 (truncated)...]
+2023-06-01T09:20:00.337+02:00 ERROR 11660 --- [http-nio-8080-exec-6] c.m.s.c.PersonController                 : could not add person
+2023-06-01T09:20:00.337+02:00 DEBUG 11660 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:20:00.338+02:00 DEBUG 11660 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:20:00.338+02:00 DEBUG 11660 --- [http-nio-8080-exec-6] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-06-01T09:21:24.194+02:00 DEBUG 13035 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c
+2023-06-01T09:21:25.252+02:00 DEBUG 13035 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:21:25.337+02:00 DEBUG 13035 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:21:25.352+02:00 DEBUG 13035 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:21:25.359+02:00 DEBUG 13035 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:21:25.519+02:00 DEBUG 13035 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:21:25.568+02:00 DEBUG 13035 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:21:25.576+02:00 ERROR 13035 --- [main] c.m.s.c.PersonController                 : could not add person
+2023-06-01T09:21:25.585+02:00 DEBUG 13035 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:21:25.585+02:00 DEBUG 13035 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:21:25.618+02:00 DEBUG 13035 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c, started on Thu Jun 01 09:21:24 CEST 2023
+2023-06-01T09:23:22.623+02:00 DEBUG 13976 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c
+2023-06-01T09:23:23.586+02:00 DEBUG 13976 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:23:23.677+02:00 DEBUG 13976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:23:23.693+02:00 DEBUG 13976 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:23:23.701+02:00 DEBUG 13976 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:23:23.848+02:00 DEBUG 13976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:23:23.893+02:00 DEBUG 13976 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=Updated Address!, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:23:23.897+02:00 ERROR 13976 --- [main] c.m.s.c.PersonController                 : could not modify person
+2023-06-01T09:23:23.904+02:00 DEBUG 13976 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:23:23.905+02:00 DEBUG 13976 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:23:23.945+02:00 DEBUG 13976 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@64138b0c, started on Thu Jun 01 09:23:22 CEST 2023
+2023-06-01T09:29:25.671+02:00 DEBUG 17127 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@41c204a0
+2023-06-01T09:29:26.764+02:00 DEBUG 17127 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:29:26.852+02:00 DEBUG 17127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:29:26.868+02:00 DEBUG 17127 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:29:26.875+02:00 DEBUG 17127 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:29:27.025+02:00 DEBUG 17127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:29:27.064+02:00 DEBUG 17127 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=Updated Address!, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:29:27.069+02:00 ERROR 17127 --- [main] c.m.s.c.PersonController                 : could not modify person
+2023-06-01T09:29:27.075+02:00 DEBUG 17127 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:29:27.076+02:00 DEBUG 17127 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:29:27.108+02:00 DEBUG 17127 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@41c204a0, started on Thu Jun 01 09:29:25 CEST 2023
+2023-06-01T09:32:00.169+02:00 DEBUG 18428 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@41c204a0
+2023-06-01T09:32:01.217+02:00 DEBUG 18428 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:32:01.306+02:00 DEBUG 18428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:32:01.322+02:00 DEBUG 18428 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:32:01.329+02:00 DEBUG 18428 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:32:01.500+02:00 DEBUG 18428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:32:01.546+02:00 DEBUG 18428 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=Updated Address!, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:32:01.551+02:00 ERROR 18428 --- [main] c.m.s.c.PersonController                 : could not modify person
+2023-06-01T09:32:01.559+02:00 DEBUG 18428 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:32:01.559+02:00 DEBUG 18428 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:32:01.595+02:00 DEBUG 18428 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@41c204a0, started on Thu Jun 01 09:32:00 CEST 2023
+2023-06-01T09:32:25.849+02:00 DEBUG 18692 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@41c204a0
+2023-06-01T09:32:26.668+02:00 DEBUG 18692 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:32:26.737+02:00 DEBUG 18692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:32:26.750+02:00 DEBUG 18692 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:32:26.756+02:00 DEBUG 18692 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:32:26.875+02:00 DEBUG 18692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:32:26.912+02:00 DEBUG 18692 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=Updated Address!, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:32:26.924+02:00 DEBUG 18692 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:32:26.925+02:00 DEBUG 18692 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Boyd, address=Updated Address!, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:32:26.962+02:00 DEBUG 18692 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@41c204a0, started on Thu Jun 01 09:32:25 CEST 2023
+2023-06-01T09:34:11.021+02:00 DEBUG 19559 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@41c204a0
+2023-06-01T09:34:11.929+02:00 DEBUG 19559 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:34:12.010+02:00 DEBUG 19559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:34:12.024+02:00 DEBUG 19559 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:34:12.029+02:00 DEBUG 19559 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:34:12.169+02:00 DEBUG 19559 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:34:12.212+02:00 DEBUG 19559 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=Updated Address!, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:34:12.225+02:00 DEBUG 19559 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:34:12.226+02:00 DEBUG 19559 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Boyd, address=Updated Address!, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:34:12.262+02:00 DEBUG 19559 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@41c204a0, started on Thu Jun 01 09:34:11 CEST 2023
+2023-06-01T09:41:14.042+02:00 DEBUG 23152 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'serverHttpObservationFilter' configured for use
+2023-06-01T09:41:14.224+02:00 DEBUG 23152 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:41:14.291+02:00 DEBUG 23152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:41:14.305+02:00 DEBUG 23152 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:41:14.311+02:00 DEBUG 23152 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:41:29.865+02:00  INFO 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-01T09:41:29.866+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-06-01T09:41:29.866+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-06-01T09:41:29.866+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-06-01T09:41:29.867+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5a8d61f
+2023-06-01T09:41:29.868+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1248b26a
+2023-06-01T09:41:29.868+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-06-01T09:41:29.869+02:00  INFO 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-06-01T09:41:29.885+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : GET "/person/all", parameters={}
+2023-06-01T09:41:29.890+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-06-01T09:41:29.905+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:41:29.907+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874 (truncated)...]
+2023-06-01T09:41:29.922+02:00 DEBUG 23152 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-06-01T09:41:42.485+02:00 DEBUG 23152 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : PUT "/person", parameters={}
+2023-06-01T09:41:42.486+02:00 DEBUG 23152 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:41:42.494+02:00 DEBUG 23152 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:41:42.501+02:00 DEBUG 23152 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:41:42.501+02:00 DEBUG 23152 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:41:42.502+02:00 DEBUG 23152 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-06-01T09:41:51.111+02:00 DEBUG 23152 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : PUT "/person", parameters={}
+2023-06-01T09:41:51.112+02:00 DEBUG 23152 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:41:51.113+02:00 DEBUG 23152 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Jon, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874-6 (truncated)...]
+2023-06-01T09:41:51.114+02:00 ERROR 23152 --- [http-nio-8080-exec-4] c.m.s.c.PersonController                 : could not modify person
+2023-06-01T09:41:51.115+02:00 DEBUG 23152 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:41:51.115+02:00 DEBUG 23152 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:41:51.115+02:00 DEBUG 23152 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-06-01T09:43:38.049+02:00 DEBUG 24363 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-06-01T09:43:39.124+02:00 DEBUG 24363 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:43:39.204+02:00 DEBUG 24363 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:43:39.219+02:00 DEBUG 24363 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:43:39.226+02:00 DEBUG 24363 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:43:39.393+02:00 DEBUG 24363 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:43:39.442+02:00 DEBUG 24363 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=Updated Address!, city=Culver, zip=97451, phone=841-87 (truncated)...]
+2023-06-01T09:43:39.450+02:00 ERROR 24363 --- [main] c.m.s.c.PersonController                 : could not modify person
+2023-06-01T09:43:39.457+02:00 DEBUG 24363 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:43:39.458+02:00 DEBUG 24363 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:43:39.487+02:00 DEBUG 24363 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Thu Jun 01 09:43:38 CEST 2023
+2023-06-01T09:45:06.836+02:00 DEBUG 25140 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e
+2023-06-01T09:45:07.812+02:00 DEBUG 25140 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:45:07.886+02:00 DEBUG 25140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:45:07.902+02:00 DEBUG 25140 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:45:07.908+02:00 DEBUG 25140 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:45:08.051+02:00 DEBUG 25140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#addPerson(Person)
+2023-06-01T09:45:08.098+02:00 DEBUG 25140 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=, city=, zip=97451, phone=841-874-6512, email=jaboyd@e (truncated)...]
+2023-06-01T09:45:08.106+02:00 ERROR 25140 --- [main] c.m.s.c.PersonController                 : could not add person
+2023-06-01T09:45:08.115+02:00 DEBUG 25140 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:45:08.116+02:00 DEBUG 25140 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:45:08.146+02:00 DEBUG 25140 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@736f3e9e, started on Thu Jun 01 09:45:06 CEST 2023
+2023-06-01T09:46:03.331+02:00 DEBUG 25658 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae
+2023-06-01T09:46:04.304+02:00 DEBUG 25658 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:46:04.389+02:00 DEBUG 25658 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:46:04.406+02:00 DEBUG 25658 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:46:04.412+02:00 DEBUG 25658 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:46:04.551+02:00 DEBUG 25658 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#updatePerson(Person)
+2023-06-01T09:46:04.597+02:00 DEBUG 25658 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=, city=, zip=97451, phone=841-874-6512, email=jaboyd@e (truncated)...]
+2023-06-01T09:46:04.605+02:00 ERROR 25658 --- [main] c.m.s.c.PersonController                 : could not modify person
+2023-06-01T09:46:04.613+02:00 DEBUG 25658 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:46:04.613+02:00 DEBUG 25658 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:46:04.642+02:00 DEBUG 25658 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae, started on Thu Jun 01 09:46:03 CEST 2023
+2023-06-01T09:47:41.429+02:00 DEBUG 26426 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae
+2023-06-01T09:47:42.615+02:00 DEBUG 26426 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:47:42.725+02:00 DEBUG 26426 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:47:42.747+02:00 DEBUG 26426 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:47:42.755+02:00 DEBUG 26426 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:47:42.933+02:00 DEBUG 26426 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T09:47:42.983+02:00 DEBUG 26426 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:47:42.991+02:00 ERROR 26426 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T09:47:42.999+02:00 DEBUG 26426 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:47:43.000+02:00 DEBUG 26426 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:47:43.043+02:00 DEBUG 26426 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae, started on Thu Jun 01 09:47:41 CEST 2023
+2023-06-01T09:48:30.413+02:00 DEBUG 26860 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae
+2023-06-01T09:48:31.367+02:00 DEBUG 26860 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:48:31.445+02:00 DEBUG 26860 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:48:31.464+02:00 DEBUG 26860 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:48:31.470+02:00 DEBUG 26860 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:48:31.613+02:00 DEBUG 26860 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T09:48:31.651+02:00 DEBUG 26860 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:48:31.658+02:00 ERROR 26860 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T09:48:31.664+02:00 DEBUG 26860 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:48:31.664+02:00 DEBUG 26860 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:48:31.695+02:00 DEBUG 26860 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae, started on Thu Jun 01 09:48:30 CEST 2023
+2023-06-01T09:50:03.946+02:00 DEBUG 27637 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae
+2023-06-01T09:50:05.007+02:00 DEBUG 27637 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:50:05.093+02:00 DEBUG 27637 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:50:05.108+02:00 DEBUG 27637 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:50:05.115+02:00 DEBUG 27637 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:50:05.264+02:00 DEBUG 27637 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T09:50:05.310+02:00 DEBUG 27637 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:50:05.317+02:00 ERROR 27637 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T09:50:05.323+02:00 DEBUG 27637 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:50:05.324+02:00 DEBUG 27637 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:50:05.356+02:00 DEBUG 27637 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae, started on Thu Jun 01 09:50:03 CEST 2023
+2023-06-01T09:51:03.938+02:00 DEBUG 28156 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae
+2023-06-01T09:51:04.930+02:00 DEBUG 28156 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T09:51:05.009+02:00 DEBUG 28156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T09:51:05.024+02:00 DEBUG 28156 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T09:51:05.029+02:00 DEBUG 28156 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T09:51:05.171+02:00 DEBUG 28156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T09:51:05.210+02:00 DEBUG 28156 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T09:51:05.216+02:00 ERROR 28156 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T09:51:05.223+02:00 DEBUG 28156 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T09:51:05.224+02:00 DEBUG 28156 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T09:51:05.255+02:00 DEBUG 28156 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae, started on Thu Jun 01 09:51:03 CEST 2023
+2023-06-01T10:07:27.716+02:00 DEBUG 36609 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6
+2023-06-01T10:07:28.827+02:00 DEBUG 36609 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T10:07:28.912+02:00 DEBUG 36609 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T10:07:28.929+02:00 DEBUG 36609 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T10:07:28.936+02:00 DEBUG 36609 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T10:07:29.074+02:00 DEBUG 36609 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T10:07:29.115+02:00 DEBUG 36609 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T10:07:29.121+02:00 ERROR 36609 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T10:07:29.128+02:00 DEBUG 36609 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T10:07:29.128+02:00 DEBUG 36609 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T10:07:29.159+02:00 DEBUG 36609 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6, started on Thu Jun 01 10:07:27 CEST 2023
+2023-06-01T10:08:36.244+02:00 DEBUG 37284 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6
+2023-06-01T10:08:37.250+02:00 DEBUG 37284 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T10:08:37.325+02:00 DEBUG 37284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T10:08:37.345+02:00 DEBUG 37284 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T10:08:37.351+02:00 DEBUG 37284 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T10:08:37.496+02:00 DEBUG 37284 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T10:08:37.533+02:00 DEBUG 37284 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T10:08:37.540+02:00 ERROR 37284 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T10:08:37.547+02:00 DEBUG 37284 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T10:08:37.547+02:00 DEBUG 37284 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T10:08:37.583+02:00 DEBUG 37284 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6, started on Thu Jun 01 10:08:36 CEST 2023
+2023-06-01T10:08:58.801+02:00 DEBUG 37462 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'serverHttpObservationFilter' configured for use
+2023-06-01T10:08:58.977+02:00 DEBUG 37462 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T10:08:59.043+02:00 DEBUG 37462 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-06-01T10:08:59.058+02:00 DEBUG 37462 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T10:08:59.064+02:00 DEBUG 37462 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T10:09:12.904+02:00  INFO 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-01T10:09:12.905+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-06-01T10:09:12.905+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-06-01T10:09:12.905+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-06-01T10:09:12.907+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4c9294e8
+2023-06-01T10:09:12.907+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@168b72c5
+2023-06-01T10:09:12.908+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-06-01T10:09:12.909+02:00  INFO 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-06-01T10:09:12.930+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : DELETE "/person", parameters={}
+2023-06-01T10:09:12.936+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T10:09:12.960+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=MariSDFe, lastName=MsdQSDQSDQDf, address=null, city=null, zip=null, phone=null, ema (truncated)...]
+2023-06-01T10:09:12.964+02:00 ERROR 37462 --- [http-nio-8080-exec-2] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T10:09:12.976+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T10:09:12.977+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T10:09:12.978+02:00 DEBUG 37462 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-06-01T10:09:31.917+02:00 DEBUG 37462 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : DELETE "/person", parameters={}
+2023-06-01T10:09:31.917+02:00 DEBUG 37462 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T10:09:31.918+02:00 DEBUG 37462 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T10:09:31.919+02:00 DEBUG 37462 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T10:09:31.919+02:00 DEBUG 37462 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T10:09:31.930+02:00 DEBUG 37462 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-06-01T10:10:40.901+02:00 DEBUG 38321 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6
+2023-06-01T10:10:41.782+02:00 DEBUG 38321 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T10:10:41.851+02:00 DEBUG 38321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T10:10:41.863+02:00 DEBUG 38321 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T10:10:41.869+02:00 DEBUG 38321 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T10:10:41.992+02:00 DEBUG 38321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T10:10:42.029+02:00 DEBUG 38321 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T10:10:42.034+02:00 ERROR 38321 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T10:10:42.041+02:00 DEBUG 38321 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T10:10:42.041+02:00 DEBUG 38321 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T10:10:42.074+02:00 DEBUG 38321 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6, started on Thu Jun 01 10:10:40 CEST 2023
+2023-06-01T16:18:24.203+02:00 DEBUG 2173 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6
+2023-06-01T16:18:25.613+02:00 DEBUG 2173 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T16:18:25.725+02:00 DEBUG 2173 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T16:18:25.747+02:00 DEBUG 2173 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T16:18:25.757+02:00 DEBUG 2173 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T16:18:25.974+02:00 DEBUG 2173 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T16:18:26.039+02:00 DEBUG 2173 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T16:18:26.046+02:00 ERROR 2173 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T16:18:26.058+02:00 DEBUG 2173 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T16:18:26.059+02:00 DEBUG 2173 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T16:18:26.120+02:00 DEBUG 2173 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6, started on Thu Jun 01 16:18:24 CEST 2023
+2023-06-01T16:19:35.389+02:00 DEBUG 2773 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6
+2023-06-01T16:19:36.452+02:00 DEBUG 2773 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T16:19:36.542+02:00 DEBUG 2773 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T16:19:36.558+02:00 DEBUG 2773 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T16:19:36.565+02:00 DEBUG 2773 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T16:19:36.734+02:00 DEBUG 2773 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T16:19:36.782+02:00 DEBUG 2773 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T16:19:36.790+02:00 ERROR 2773 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T16:19:36.799+02:00 DEBUG 2773 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T16:19:36.800+02:00 DEBUG 2773 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T16:19:36.834+02:00 DEBUG 2773 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@73ba6fe6, started on Thu Jun 01 16:19:35 CEST 2023
+2023-06-01T16:19:52.274+02:00 DEBUG 2866 --- [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'serverHttpObservationFilter' configured for use
+2023-06-01T16:19:52.586+02:00 DEBUG 2866 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T16:19:52.710+02:00 DEBUG 2866 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2023-06-01T16:19:52.733+02:00 DEBUG 2866 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T16:19:52.744+02:00 DEBUG 2866 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T16:20:01.551+02:00  INFO 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-01T16:20:01.552+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected StandardServletMultipartResolver
+2023-06-01T16:20:01.552+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected AcceptHeaderLocaleResolver
+2023-06-01T16:20:01.552+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected FixedThemeResolver
+2023-06-01T16:20:01.553+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4cf7e72
+2023-06-01T16:20:01.553+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4684d62d
+2023-06-01T16:20:01.553+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-06-01T16:20:01.555+02:00  INFO 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-06-01T16:20:01.572+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : DELETE "/person", parameters={}
+2023-06-01T16:20:01.576+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T16:20:01.600+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T16:20:01.614+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T16:20:01.615+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Person(firstName=John, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone=841-874- (truncated)...]
+2023-06-01T16:20:01.623+02:00 DEBUG 2866 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-06-01T16:20:10.760+02:00 DEBUG 2866 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : GET "/person/all", parameters={}
+2023-06-01T16:20:10.761+02:00 DEBUG 2866 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#getPersons()
+2023-06-01T16:20:10.768+02:00 DEBUG 2866 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T16:20:10.769+02:00 DEBUG 2866 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[Person(firstName=Jonanathan, lastName=Marrack, address=29 15th St, city=Culver, zip=97451, phone=84 (truncated)...]
+2023-06-01T16:20:10.771+02:00 DEBUG 2866 --- [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet                : Completed 200 OK
+2023-06-01T16:20:23.911+02:00 DEBUG 2866 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : DELETE "/person", parameters={}
+2023-06-01T16:20:23.911+02:00 DEBUG 2866 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T16:20:23.913+02:00 DEBUG 2866 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=Jonanathan, lastName=Marck, address=29 15th St, city=Culver, zip=97451, phone=841-8 (truncated)...]
+2023-06-01T16:20:23.913+02:00 ERROR 2866 --- [http-nio-8080-exec-4] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T16:20:23.914+02:00 DEBUG 2866 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T16:20:23.914+02:00 DEBUG 2866 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T16:20:23.914+02:00 DEBUG 2866 --- [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet                : Completed 204 NO_CONTENT
+2023-06-01T16:21:47.270+02:00 DEBUG 3924 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae
+2023-06-01T16:21:48.333+02:00 DEBUG 3924 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-01T16:21:48.424+02:00 DEBUG 3924 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-06-01T16:21:48.444+02:00 DEBUG 3924 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-01T16:21:48.452+02:00 DEBUG 3924 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-01T16:21:48.636+02:00 DEBUG 3924 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.mariemoore.safetynet.controller.PersonController#deletePerson(Person)
+2023-06-01T16:21:48.689+02:00 DEBUG 3924 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Person(firstName=I don't exist, lastName=Boyd, address=1509 Culver St, city=Culver, zip=97451, phone (truncated)...]
+2023-06-01T16:21:48.697+02:00 ERROR 3924 --- [main] c.m.s.c.PersonController                 : could not delete person
+2023-06-01T16:21:48.706+02:00 DEBUG 3924 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-01T16:21:48.707+02:00 DEBUG 3924 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2023-06-01T16:21:48.744+02:00 DEBUG 3924 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1f443fae, started on Thu Jun 01 16:21:47 CEST 2023
