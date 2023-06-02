@@ -58,9 +58,8 @@ public class MedicalRecordController {
         MedicalRecord deletedMedicalRecord = medicalRecordService.deleteMedicalRecord(medicalRecord);
         if(Objects.isNull(deletedMedicalRecord)){
             logger.error("could not delete medical records");
-            return ResponseEntity.noContent().build();
         }
         logger.info("medical record added successfully");
-        return ResponseEntity.ok().body(deletedMedicalRecord);
+        return ResponseEntity.noContent().build();
     }
 }
