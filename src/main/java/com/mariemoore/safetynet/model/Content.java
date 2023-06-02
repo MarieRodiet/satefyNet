@@ -8,7 +8,6 @@ import java.util.List;
  * Content class is used by Object Mapper to read the json file containing
  * all the data for creating Lists of Objects Persons, Firestations and MedicalRecords.
  */
-@AllArgsConstructor
 @NoArgsConstructor
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
