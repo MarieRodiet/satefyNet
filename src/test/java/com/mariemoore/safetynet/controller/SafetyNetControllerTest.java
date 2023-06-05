@@ -237,6 +237,29 @@ public class SafetyNetControllerTest {
                 .andExpect(status().isNoContent());
     }
 
+    @Test
+    public void getHouseholdAttachedToFirestationShouldReturnOk() throws Exception{
+        when(firestationService.getFirestations()).thenReturn(firestationList);
+        when(personService.findPersonsByAddress(john.getAddress())).thenReturn(personList); // Mock your person data
+        when(medicalRecordService.getBirthdayFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getBirthdate());
+        when(medicalRecordService.getMedicationFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getMedications());
+        when(medicalRecordService.getAllergiesFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getAllergies());
+
+
+        HashMap<String, List<PersonMedicalDataDTO>> expectedResult = new HashMap<>();
+        List<PersonMedicalDataDTO> persons = new ArrayList<>();
+        expectedResult.put(firstFirestation.getAddress(), persons);
+        ArrayList<Integer> stationNumbers = new ArrayList<>(Arrays.asList(1, 2));
+
+        mvc.perform(get("/flood/stations")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .param("stations", stationNumbers.stream().map(Object::toString).toArray(String[]::new)))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.size()").value(expectedResult.size()));
+
+    }
+
 
 
 }
