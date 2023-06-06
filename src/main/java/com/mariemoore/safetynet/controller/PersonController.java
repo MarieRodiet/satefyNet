@@ -4,7 +4,6 @@ import com.mariemoore.safetynet.model.Person;
 import com.mariemoore.safetynet.service.PersonService;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -59,9 +58,8 @@ public class PersonController {
         Person deletedPerson = personService.deletePerson(person.getLastName(), person.getFirstName());
         if(Objects.isNull(deletedPerson)){
             logger.error("could not delete person");
-            return ResponseEntity.noContent().build();
         }
         logger.info("person deleted successfully");
-        return ResponseEntity.ok().body(deletedPerson);
+        return ResponseEntity.noContent().build();
     }
 }

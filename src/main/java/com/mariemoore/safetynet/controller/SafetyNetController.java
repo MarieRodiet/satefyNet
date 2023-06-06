@@ -76,8 +76,7 @@ public class SafetyNetController {
         List<PersonAgeDTO> children = CustomFilters.getChildrenFromList(peopleLivingAtAddress, this.medicalRecordService.getMedicalRecords());
 
         //get all children with their household
-        List<ChildWithHouseholdDTO> childrenWithAge = new ArrayList<>();
-        childrenWithAge = children.stream()
+        List<ChildWithHouseholdDTO> childrenWithAge = children.stream()
                         .map(child -> new ChildWithHouseholdDTO(
                                 child.getFirstName(),
                                 child.getLastName(),
