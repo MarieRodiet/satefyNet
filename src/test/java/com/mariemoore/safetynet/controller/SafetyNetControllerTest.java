@@ -210,8 +210,6 @@ public class SafetyNetControllerTest {
         when(personService.findPersonsByAddress(john.getAddress())).thenReturn(List.of(john));
         when(firestationService.findStationNumberByAddress(john.getAddress())).thenReturn(firstFirestation.getStation());
         when(medicalRecordService.getBirthdayFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getBirthdate());
-        //when(medicalRecordService.getMedicationFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getMedications());
-        //when(medicalRecordService.getAllergiesFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getAllergies());
 
 
         List<PersonMedicalDataDTO> personMedicalDataDTOS = new ArrayList<>();
@@ -242,9 +240,6 @@ public class SafetyNetControllerTest {
         when(firestationService.getFirestations()).thenReturn(firestationList);
         when(personService.findPersonsByAddress(john.getAddress())).thenReturn(personList); // Mock your person data
         when(medicalRecordService.getBirthdayFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getBirthdate());
-        when(medicalRecordService.getMedicationFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getMedications());
-        when(medicalRecordService.getAllergiesFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getAllergies());
-
 
         HashMap<String, List<PersonMedicalDataDTO>> expectedResult = new HashMap<>();
         List<PersonMedicalDataDTO> persons = new ArrayList<>();
@@ -260,6 +255,74 @@ public class SafetyNetControllerTest {
 
     }
 
+    @Test
+    public void getNoHouseholdAttachedToFirestationShouldReturnNoContent() throws Exception{
+        when(firestationService.getFirestations()).thenReturn(new ArrayList<>());
+        ArrayList<Integer> stationNumbers = new ArrayList<>(Arrays.asList(100, 200));
+
+        mvc.perform(get("/flood/stations")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .param("stations", stationNumbers.stream().map(Object::toString).toArray(String[]::new)))
+                .andDo(print())
+                .andExpect(status().isNoContent());
+
+    }
+
+    @Test
+    void testGetListOfPersonsShouldReturnOk() throws Exception {
+        when(personService.getPersons()).thenReturn(personList);
+        when(medicalRecordService.getBirthdayFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getBirthdate());
+        when(medicalRecordService.getMedicationFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getMedications());
+        when(medicalRecordService.getAllergiesFromFirstnameAndLastname(john.getFirstName(), john.getLastName())).thenReturn(johnsMedicalRecord.getAllergies());
+
+        // Perform the request and validate the response
+        mvc.perform(get("/personInfo")
+                        .param("firstName", john.getFirstName())
+                        .param("lastName", john.getLastName())
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray())
+                .andExpect(jsonPath("$.length()").value(1))
+                .andExpect(jsonPath("$[0].firstName").value(john.getFirstName()))
+                .andExpect(jsonPath("$[0].lastName").value(john.getLastName()))
+                .andExpect(jsonPath("$[0].address").value(john.getAddress()))
+                .andExpect(jsonPath("$[0].age").value(39)) // Assuming current date is 2023-06-02
+                .andExpect(jsonPath("$[0].email").value(john.getEmail()))
+                .andExpect(jsonPath("$[0].medications").isArray())
+                .andExpect(jsonPath("$[0].allergies").isArray());
+    }
+    @Test
+    void testGetListOfPersonsWithPersonNotFoundShouldReturnNoContent() throws Exception {
+        when(personService.getPersons()).thenReturn(new ArrayList<>());
+        mvc.perform(get("/personInfo")
+                        .param("firstName", john.getFirstName())
+                        .param("lastName", john.getLastName())
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNoContent());
+    }
+
+    @Test
+    void testGetPersonsEmailsByCityShouldReturnOk() throws Exception {
+        when(personService.getPersons()).thenReturn(personList);
+
+        // Perform the request and validate the response
+        mvc.perform(get("/communityEmail")
+                        .param("city", john.getCity())
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void testGetPersonsEmailsByCityWhenCityNotFoundShouldReturnNoContent() throws Exception {
+        when(personService.getPersons()).thenReturn(new ArrayList<>());
+
+        // Perform the request and validate the response
+        mvc.perform(get("/communityEmail")
+                        .param("city", john.getCity())
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNoContent());
+    }
 
 
 }
