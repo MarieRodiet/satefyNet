@@ -1,9 +1,6 @@
 package com.mariemoore.safetynet.controller;
 
-import com.mariemoore.safetynet.dto.ChildWithHouseholdDTO;
-import com.mariemoore.safetynet.dto.PersonAgeDTO;
 import com.mariemoore.safetynet.dto.PersonMedicalDataDTO;
-import com.mariemoore.safetynet.jsonUtils;
 import com.mariemoore.safetynet.model.Firestation;
 import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.model.Person;
@@ -18,7 +15,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import static org.hamcrest.Matchers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
