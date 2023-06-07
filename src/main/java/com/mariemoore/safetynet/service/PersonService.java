@@ -23,8 +23,8 @@ public class PersonService {
         return personRepository.findAll();
     }
 
-    public Person deletePerson(String lastname, String firstname){
-        return personRepository.deletePerson(lastname, firstname);
+    public Person deletePerson(String firstname, String lastname){
+        return personRepository.deletePerson(firstname, lastname);
     }
 
     public Person addPerson(Person person){

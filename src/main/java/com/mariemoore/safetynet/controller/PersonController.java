@@ -55,7 +55,7 @@ public class PersonController {
     @ResponseBody
     @DeleteMapping
     public ResponseEntity<Person> deletePerson(@RequestBody Person person){
-        Person deletedPerson = personService.deletePerson(person.getLastName(), person.getFirstName());
+        Person deletedPerson = personService.deletePerson(person.getFirstName(), person.getLastName());
         if(Objects.isNull(deletedPerson)){
             logger.error("could not delete person");
         }
