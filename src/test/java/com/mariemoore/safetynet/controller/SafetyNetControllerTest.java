@@ -1,15 +1,13 @@
 package com.mariemoore.safetynet.controller;
 
-import com.mariemoore.safetynet.dto.ChildWithHouseholdDTO;
-import com.mariemoore.safetynet.dto.PersonAgeDTO;
 import com.mariemoore.safetynet.dto.PersonMedicalDataDTO;
-import com.mariemoore.safetynet.jsonUtils;
 import com.mariemoore.safetynet.model.Firestation;
 import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.model.Person;
 import com.mariemoore.safetynet.service.FirestationService;
 import com.mariemoore.safetynet.service.MedicalRecordService;
 import com.mariemoore.safetynet.service.PersonService;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -18,10 +16,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import static org.hamcrest.Matchers.*;
+import org.springframework.test.web.servlet.ResultActions;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,6 +27,7 @@ import java.util.List;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @WebMvcTest(controllers = SafetyNetController.class)
@@ -141,7 +139,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/firestation")
                 .contentType(MediaType.APPLICATION_JSON)
                 .param("stationNumber", firstFirestation.getStation().toString()))
-                .andDo(print())
                 .andExpect(status().isOk());
     }
 
@@ -151,7 +148,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/firestation")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("stationNumber", firstFirestation.getStation().toString()))
-                .andDo(print())
                 .andExpect(status().isNoContent());
     }
 
@@ -165,7 +161,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/childAlert")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("address", firstFirestation.getAddress()))
-                .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.size()").value(1));
     }
@@ -176,7 +171,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/childAlert")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("address", firstFirestation.getAddress()))
-                .andDo(print())
                 .andExpect(status().isNoContent());
     }
 
@@ -191,7 +185,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/phoneAlert")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("firestation", firstFirestation.getStation().toString()))
-                .andDo(print())
                 .andExpect(status().isOk());
     }
 
@@ -201,7 +194,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/phoneAlert")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("firestation", firstFirestation.getStation().toString()))
-                .andDo(print())
                 .andExpect(status().isNoContent());
     }
 
@@ -219,7 +211,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/fire")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("address", firstFirestation.getAddress()))
-                .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.size()").value(1))
                 .andExpect(jsonPath("$.3").isArray());
@@ -231,7 +222,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/fire")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("address", firstFirestation.getStation().toString()))
-                .andDo(print())
                 .andExpect(status().isNoContent());
     }
 
@@ -249,8 +239,8 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/flood/stations")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("stations", stationNumbers.stream().map(Object::toString).toArray(String[]::new)))
-                .andDo(print())
                 .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.size()").value(expectedResult.size()));
 
     }
@@ -263,7 +253,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/flood/stations")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("stations", stationNumbers.stream().map(Object::toString).toArray(String[]::new)))
-                .andDo(print())
                 .andExpect(status().isNoContent());
 
     }
@@ -309,7 +298,6 @@ public class SafetyNetControllerTest {
         mvc.perform(get("/communityEmail")
                         .param("city", john.getCity())
                         .contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
                 .andExpect(status().isOk());
     }
 

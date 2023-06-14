@@ -4,9 +4,7 @@ import com.mariemoore.safetynet.model.Firestation;
 import com.mariemoore.safetynet.model.MedicalRecord;
 import com.mariemoore.safetynet.model.Person;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Objects;
 
 @Service
 public class Validation {

@@ -51,7 +51,7 @@ public class PersonRepository{
         return isFoundAndValid ? toUpdate : null;
     }
 
-    public Person deletePerson(String lastname, String firstname) {
+    public Person deletePerson(String firstname, String lastname) {
         Person deleted = null;
         List<Person> toKeep = new ArrayList<>();
         for(Person p : this.persons){

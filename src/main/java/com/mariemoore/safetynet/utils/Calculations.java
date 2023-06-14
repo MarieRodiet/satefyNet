@@ -2,12 +2,15 @@ package com.mariemoore.safetynet.utils;
 
 import com.mariemoore.safetynet.dto.PersonPhoneDTO;
 import com.mariemoore.safetynet.model.MedicalRecord;
+import com.mariemoore.safetynet.model.Person;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import static java.lang.Integer.parseInt;
+
 public class Calculations {
 
     public static HashMap<String, Integer> countAdultsAndChildren(List<PersonPhoneDTO> personsDTO, List<MedicalRecord> medicalRecords){
