@@ -62,13 +62,13 @@ public class PersonRepositoryTest {
     }
 
     @Test
-    public void findAllSuccessTest () throws Exception {
+    public void findAllSuccessTest (){
         personRepository.persons = personList;
         List<Person> personResult = personRepository.findAll();
         Assertions.assertEquals(3, personResult.size());
     }
     @Test
-    public void savePersonShouldReturnOk () {
+    public void savePersonShouldReturnOk() {
         Person toSave = new Person(
                 "Marie",
                 "Moore",
@@ -85,7 +85,7 @@ public class PersonRepositoryTest {
     }
 
     @Test
-    public void updatePersonShouldReturnOk () {
+    public void updatePersonShouldReturnOk() {
         Person toSave = new Person(
                 "Marie",
                 "Moore",
@@ -112,7 +112,7 @@ public class PersonRepositoryTest {
     }
 
     @Test
-    public void deletePersonShouldReturnOk () {
+    public void deletePersonShouldReturnOk() {
         personRepository.save(new Person(
                 "Marie",
                 "Moore",
@@ -133,6 +133,9 @@ public class PersonRepositoryTest {
         personRepository.persons = personList;
         List<Person> household = personRepository.getHouseholdOfChild(tenley.getFirstName(), tenley.getLastName());
         Assertions.assertEquals(2, household.size());
+        Assertions.assertEquals("John", household.get(0).getFirstName());
+        Assertions.assertEquals("Jacob", household.get(1).getFirstName());
+
     }
 
     @Test
