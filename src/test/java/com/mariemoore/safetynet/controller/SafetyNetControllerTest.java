@@ -7,7 +7,6 @@ import com.mariemoore.safetynet.model.Person;
 import com.mariemoore.safetynet.service.FirestationService;
 import com.mariemoore.safetynet.service.MedicalRecordService;
 import com.mariemoore.safetynet.service.PersonService;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -16,10 +15,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
-
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
