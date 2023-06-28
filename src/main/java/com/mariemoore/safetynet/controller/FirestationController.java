@@ -15,7 +15,7 @@ import static org.apache.logging.log4j.LogManager.getLogger;
 public class FirestationController {
 
     @Autowired
-    FirestationService firestationService;
+    private FirestationService firestationService;
     private static final Logger logger = getLogger(FirestationController.class);
 
     public FirestationController(FirestationService firestationService) {

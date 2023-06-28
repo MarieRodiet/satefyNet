@@ -225,6 +225,7 @@ public class SafetyNetController {
          List<String> emails = this.personService.getPersons().stream()
                      .filter(person -> Objects.equals(person.getCity(), city))
                      .map(person -> person.getEmail())
+                 .distinct()
                  .collect(Collectors.toList());
          if(emails.size() == 0){
              logger.error("could not get a list of persons living in this city: " + city);
