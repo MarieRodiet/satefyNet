@@ -126,12 +126,18 @@ public class MedicalRepositoryTest {
 
     @Test
     public void deleteMedicalRecordShouldReturnOk() {
-        medicalRecordRepository.medicalRecords = medicalRecordList;
-        MedicalRecord result = medicalRecordRepository.findMedicalRecordByFirstnameAndLastname("John","Boyd");
-        Assertions.assertEquals("John", result.getFirstName());
-        medicalRecordRepository.delete(johnsMedicalRecord);
-        medicalRecordRepository.findMedicalRecordByFirstnameAndLastname(johnsMedicalRecord.getFirstName(), johnsMedicalRecord.getLastName());
-        Assertions.assertEquals(null, medicalRecordRepository.findMedicalRecordByFirstnameAndLastname("John", "Boyd"));
+        MedicalRecord toSave = new MedicalRecord(
+                "Marie",
+                "Moore",
+                "03/06/1984",
+                Arrays.asList("aznol:350mg", "hydrapermazol:100mg"),
+                Arrays.asList("nillacilan"));
+        medicalRecordRepository.save(toSave);
+        MedicalRecord newlySaved = medicalRecordRepository.findMedicalRecordByFirstnameAndLastname("Marie","Moore");
+        Assertions.assertEquals("Marie", newlySaved.getFirstName());
+        medicalRecordRepository.delete(toSave);
+        MedicalRecord deleted = medicalRecordRepository.findMedicalRecordByFirstnameAndLastname("Marie","Moore");
+        Assertions.assertEquals(null, deleted);
     }
 
     @Test
@@ -150,7 +156,7 @@ public class MedicalRepositoryTest {
     public void findBirthdayByFirstnameAndLastNameShouldReturnMedicalRecord(){
         medicalRecordRepository.medicalRecords = medicalRecordList;
         String birthday = medicalRecordRepository.getBirthdayFromFirstnameAndLastname("John", "Boyd");
-        Assertions.assertEquals("03/06/1984", birthday);
+        Assertions.assertEquals("03/06/1988", birthday);
     }
 
     @Test
@@ -178,7 +184,7 @@ public class MedicalRepositoryTest {
     public void getAllergiesFromFirstnameAndLastnameShouldReturnAllergies() {
         medicalRecordRepository.medicalRecords = medicalRecordList;
         List<String> allergies = medicalRecordRepository.getAllergiesFromFirstnameAndLastname("John", "Boyd");
-        Assertions.assertEquals("aznol:350mg", allergies.get(0));
+        Assertions.assertEquals("nillacilan", allergies.get(0));
     }
 
     @Test

@@ -5,6 +5,7 @@ import com.mariemoore.safetynet.utils.Validation;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Repository
 public class MedicalRecordRepository {
@@ -51,7 +52,7 @@ public class MedicalRecordRepository {
         if(Objects.isNull(exists)){
             return null;
         }
-        this.medicalRecords.stream().filter((m -> !m.equals(exists)));
+        this.medicalRecords = this.medicalRecords.stream().filter((m -> !m.equals(exists))).collect(Collectors.toList());
         return toDelete;
     }
 
