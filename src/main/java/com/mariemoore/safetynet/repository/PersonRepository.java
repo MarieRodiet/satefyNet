@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
 
 @Repository
 public class PersonRepository{
-    List<Person> persons;
-    JsonDataGetter jsonDataGetter;
-    Validation validation;
+    public List<Person> persons;
+    private JsonDataGetter jsonDataGetter;
+    private Validation validation;
 
     public PersonRepository(JsonDataGetter jsonDataGetter, Validation validation) throws Exception {
         this.jsonDataGetter = jsonDataGetter;

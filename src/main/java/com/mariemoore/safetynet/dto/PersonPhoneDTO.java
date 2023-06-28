@@ -6,7 +6,7 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class PersonPhoneDTO {
-    public String firstName;
-    public String lastName;
-    public String phone;
+    private String firstName;
+    private String lastName;
+    private String phone;
 }

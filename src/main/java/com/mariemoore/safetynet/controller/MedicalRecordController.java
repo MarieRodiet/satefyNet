@@ -15,7 +15,7 @@ import static org.apache.logging.log4j.LogManager.getLogger;
 public class MedicalRecordController {
 
     @Autowired
-    MedicalRecordService medicalRecordService;
+    private MedicalRecordService medicalRecordService;
     private static final Logger logger = getLogger(MedicalRecordController.class);
 
     public MedicalRecordController(MedicalRecordService medicalRecordService) {

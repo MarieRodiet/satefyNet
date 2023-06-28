@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
 @Repository
 public class MedicalRecordRepository {
 
-    List<MedicalRecord> medicalRecords;
-    JsonDataGetter jsonDataGetter;
-    Validation validation;
+    public List<MedicalRecord> medicalRecords;
+    private JsonDataGetter jsonDataGetter;
+    private Validation validation;
 
     public MedicalRecordRepository(JsonDataGetter jsonDataGetter, Validation validation) {
         this.jsonDataGetter = jsonDataGetter;

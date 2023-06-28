@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
 
 @Repository
 public class FirestationRepository {
-    List<Firestation> firestations;
-    JsonDataGetter jsonDataGetter;
-    Validation validation;
+    public List<Firestation> firestations;
+    private JsonDataGetter jsonDataGetter;
+    private Validation validation;
 
     public FirestationRepository(JsonDataGetter jsonDataGetter, Validation validation){
         this.jsonDataGetter = jsonDataGetter;
